@@ -1,0 +1,45 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Demo Project
+     * @author      Jeroen Leijten
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+<!--
+    Note: To show a background image, set the "data-bg" attribute below
+    to the url of your image. This is used in each section to set
+    the background image.
+-->
+
+<{{ config.container_tag|default('section') }} class="{{[config.container_class]|join('  |  ') }}" data-bg="{{ content.image|t(locales) }}" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    <div class="inner">
+        <article class="box">
+            {% if content.title|t(locales) %}
+                <header>
+                    <h2>{{ content.title|t(locales) }}</h2>
+                    <p>{{ content.date|t(locales) }}</p>
+                </header>
+            {% endif %}
+
+            {% if content.body|t(locales) %}
+                <div class="content">
+                    {{ content.body|t(locales)|markdown }}
+                </div>
+            {% endif %}
+
+            {% if content.button.label|t(locales) %}
+                <footer>
+                    <a href="{{ content.button.page|t(locales) }}" class="button alt">{{ content.button.label|t(locales) }}</a>
+                </footer>
+            {% endif %}
+        </article>
+    </div>
+</{{ config.container_tag|default('section') }}>

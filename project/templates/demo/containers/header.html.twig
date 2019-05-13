@@ -1,0 +1,23 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Demo Project
+     * @author      Jeroen Leijten
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+<{{ config.container_tag|default('header') }} class="{{[config.container_class]|join('  |  ') }}" id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    {% if content.title.label|t(locales) %}
+        <div class="logo">
+            <a href="{{ route({'page': content.title.page }) }}">{{ content.title.label|t(locales) }}</a>
+        </div>
+    {% endif %}
+    <a href="#menu"><span>Menu</span></a>
+</{{ config.container_tag|default('header') }}>

@@ -1,0 +1,78 @@
+{
+	"route": {
+		"en-GB": ""
+	},
+	"frontender": "1556281216",
+	"template": "demo/layouts/default.html.twig",
+	"name": {
+		"en-GB": "Base page blueprint"
+	},
+	"description": {
+		"en-GB": "The page is a sample page blueprint."
+	},
+	"page_config": {
+		"seo": {
+			"label": {
+				"en-GB": "SEO"
+			},
+			"controls": {
+				"title": {
+					"value": {
+						"en-GB": ""
+					},
+					"label": {
+						"en-GB": "Page title"
+					},
+					"control": "core/text",
+					"type": "text"
+				},
+				"meta_description": {
+					"value": {
+						"en-GB": ""
+					},
+					"label": {
+						"en-GB": "Serp Description"
+					},
+					"control": "core/textarea",
+					"type": "textarea"
+				},
+				"meta_keywords": {
+					"value": {
+						"en-GB": "Frontender, Frontender Desktop, Frontender Platform, Demo"
+					},
+					"label": {
+						"en-GB": "Serp keywords"
+					},
+					"control": "core/textarea",
+					"type": "textarea"
+				},
+				"meta_robots": {
+					"value": "index, follow",
+					"label": {
+						"en-GB": "Indexing"
+					},
+					"control": "core/robots",
+					"type": "text"
+				}
+			}
+		}
+	},
+	"template_config": {
+		"config": {
+			"label": {
+				"en-GB": "Settings"
+			},
+			"controls": {
+				"container_class": {
+					"value": "",
+					"label": {
+						"en-GB": "Body class"
+					},
+					"core": "core/text",
+					"type": "hidden"
+				}
+			}
+		}
+	},
+	"containers": []
+}

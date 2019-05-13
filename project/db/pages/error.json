@@ -1,0 +1,76 @@
+{
+	"route": "404",
+	"frontender": "1556281216",
+	"template": "demo/layouts/default.html.twig",
+	"name": {
+		"en-GB": "Error page"
+	},
+	"description": {
+		"en-GB": "The page is shown when a non-existing resource is requested."
+	},
+	"page_config": {
+		"seo": {
+			"label": {
+				"en-GB": "SEO"
+			},
+			"controls": {
+				"title": {
+					"value": {
+						"en-GB": "Demo – A skeleton project for Frontender"
+					},
+					"label": {
+						"en-GB": "Page title"
+					},
+					"control": "core/text",
+					"type": "text"
+				},
+				"meta_description": {
+					"value": {
+						"en-GB": "Demo – A skeleton project for Frontender"
+					},
+					"label": {
+						"en-GB": "Serp Description"
+					},
+					"control": "core/textarea",
+					"type": "textarea"
+				},
+				"meta_keywords": {
+					"value": {
+						"en-GB": "Frontender, Frontender Desktop, Frontender Platform, Demo"
+					},
+					"label": {
+						"en-GB": "Serp keywords"
+					},
+					"control": "core/textarea",
+					"type": "textarea"
+				},
+				"meta_robots": {
+					"value": "noindex, nofollow",
+					"label": {
+						"en-GB": "Indexing"
+					},
+					"control": "core/robots",
+					"type": "text"
+				}
+			}
+		}
+	},
+	"template_config": {
+		"config": {
+			"label": {
+				"en-GB": "Settings"
+			},
+			"controls": {
+				"container_class": {
+					"value": "",
+					"label": {
+						"en-GB": "Body class"
+					},
+					"core": "core/text",
+					"type": "hidden"
+				}
+			}
+		}
+	},
+	"containers": []
+}

@@ -1,0 +1,53 @@
+{
+    "value": "div",
+    "label": {
+        "en": "Container tag"
+    },
+    "hidden": "0",
+    "access": "all",
+    "type": "list",
+    "options": [
+        {
+            "value": "div",
+            "label": {
+                "en": "<div>"
+            }
+        },
+        {
+            "value": "section",
+            "label": {
+                "en": "<section>"
+            }
+        },
+        {
+            "value": "article",
+            "label": {
+                "en": "<article>"
+            }
+        },
+        {
+            "value": "header",
+            "label": {
+                "en": "<header>"
+            }
+        },
+        {
+            "value": "aside",
+            "label": {
+                "en": "<aside>"
+            }
+        },
+        {
+            "value": "nav",
+            "label": {
+                "en": "<nav>"
+            }
+        },
+        {
+            "value": "footer",
+            "label": {
+                "en": "<footer>"
+            }
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "frontender": "1557733870",
+    "template": "demo/containers/header.html.twig",
+    "name": {
+        "en-GB": "Header"
+    },
+    "description": {
+        "en-GB": "Simple header container"
+    },
+    "template_config": {
+        "content": {
+            "label": {
+                "en-GB": "Content"
+            },
+            "controls": {
+                "title": {
+                    "value": {
+						"label": {
+							"en-GB": "Road trip by TEMPLATED"
+						},
+						"page": "",
+						"id": ""
+					},
+    				"label": {
+    					"en-GB": "Links"
+    				},
+    				"control": "core/route"
+                }
+            }
+        },
+        "config": {
+            "label": {
+                "en-GB": "Settings"
+            },
+            "controls": {
+                "container_tag": {
+					"value": "header",
+					"control": "project/container_tag"
+				},
+                "container_class": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Container class"
+                    },
+                    "control": "core/text"
+                }
+            }
+        }
+    },
+    "containers": []
+}

@@ -1,0 +1,56 @@
+{
+    "frontender": "1557733869",
+    "template": "demo/containers/footer.html.twig",
+    "name": {
+        "en-GB": "Footer"
+    },
+    "description": {
+        "en-GB": "Simple footer container"
+    },
+    "template_config": {
+        "content": {
+            "label": {
+                "en-GB": "Content"
+            },
+            "controls": {
+                "title": {
+                    "value": {
+                        "en-GB": "Contact us"
+                    },
+                    "label": {
+                        "en-GB": "Title"
+                    },
+                    "control": "core/text"
+                },
+                "copyright": {
+                    "value": {
+                        "en-GB": "Feel free to copy and use this template."
+                    },
+                    "label": {
+                        "en-GB": "Lead paragraph"
+                    },
+                    "control": "core/textarea"
+                }
+            }
+        },
+        "config": {
+            "label": {
+                "en-GB": "Settings"
+            },
+            "controls": {
+                "container_tag": {
+					"value": "footer",
+					"control": "project/container_tag"
+				},
+                "container_class": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Container class"
+                    },
+                    "control": "core/text"
+                }
+            }
+        }
+    },
+    "containers": []
+}

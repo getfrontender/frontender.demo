@@ -1,0 +1,42 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Stark Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% extends 'demo/layouts/base.html.twig' %}
+
+{{ '/assets/styles/main.css'|addStyle('styles') }}
+{{ '/assets/scripts/jquery.min.js'|addScript('beforeBodyEnd') }}
+{{ '/assets/scripts/jquery.scrolly/min.js'|addScript('beforeBodyEnd') }}
+{{ '/assets/scripts/jquery.scrollex.min.js'|addScript('beforeBodyEnd') }}
+{{ '/assets/scripts/skel.min.js'|addScript('beforeBodyEnd') }}
+{{ '/assets/scripts/util.js'|addScript('beforeBodyEnd') }}
+{{ '/assets/scripts/main.js'|addScript('beforeBodyEnd') }}
+
+{% block title %}
+    <title>{{ page_config.seo.controls.title.value|t }}</title>
+{% endblock %}
+
+{% block meta %}
+    <meta name="robots" content="{{ page_config.seo.controls.meta_robots.value|default('index,follow')|t }}">
+    {% if page_config.seo.controls.meta_description.value|t is not empty %}
+        <meta name="description" content="{{ page_config.seo.controls.meta_description.value|t }}">
+    {% endif %}
+    {% if page_config.seo.controls.meta_keywords.value|t is not empty %}
+        <meta name="keywords" content="{{ page_config.seo.controls.meta_keywords.value|t }}">
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
