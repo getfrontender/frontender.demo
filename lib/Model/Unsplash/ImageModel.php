@@ -19,17 +19,24 @@ class ImageModel extends AbstractModel
     {
         // Force it to an array, we need to access "private" data.
         $data = \Crew\Unsplash\Photo::find($this->getState()->id);
-        $properties = ['id', 'created_at', 'updated_at', 'width', 'height', 'color', 'description', 'alt_description', 'urls'];
-        $image = [];
-
-        foreach ($properties as $property) {
-            $image[$property] = $data->{$property};
-        }
+        $image = self::getImageArray($data);
 
         $model = new ImageModel($this->container);
         $model->setState($this->getState()->getValues())
             ->setData($image);
 
         return [$model];
+    }
+
+    public static function getImageArray($data)
+    {
+        $image = [];
+        $properties = ['id', 'created_at', 'updated_at', 'width', 'height', 'color', 'description', 'alt_description', 'urls'];
+
+        foreach ($properties as $property) {
+            $image[$property] = $data->{$property};
+        }
+
+        return $image;
     }
 }

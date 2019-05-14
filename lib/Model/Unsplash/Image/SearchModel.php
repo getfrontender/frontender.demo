@@ -4,7 +4,7 @@ namespace Prototype\Model\Unsplash\Image;
 
 use Slim\Container;
 use Prototype\Model\Unsplash\ImageModel;
-use Frontender\Core\Model\AbstractModel;
+use Prototype\Model\Unsplash\AbstractModel;
 
 class SearchModel extends AbstractModel
 {
@@ -13,9 +13,9 @@ class SearchModel extends AbstractModel
         parent::__construct($container);
 
         $this->getState()
-            ->insert('q', 'string')
-            ->insert('limit', 'int', 20)
-            ->insert('offset', 'int');
+            ->insert('q')
+            ->insert('limit', 20)
+            ->insert('skip');
     }
 
     public function fetch()
@@ -23,11 +23,24 @@ class SearchModel extends AbstractModel
         $state = $this->getState()->getValues();
         $page = 1;
 
-        if (isset($state['offset']) && !empty($state['offset'])) {
-            $page = ($state['offset'] / $state['limit']) + $page;
+        if (isset($state['skip']) && !empty($state['skip'])) {
+            $page = ($state['skip'] / $state['limit']) + $page;
         }
 
-        $data = \Crew\Unsplash\Search::photos($state['q'], $page, $state['limit']);
+        error_log(print_r($state, 1));
+        error_log($page);
+
+        if (isset($state['q']) && !empty($state['q'])) {
+            $data = \Crew\Unsplash\Search::photos($state['q'], $page, $state['limit']);
+            $data = $data->getResults();
+        } else {
+            $data = \Crew\Unsplash\Photo::all($page, $state['limit']);
+            $images = $data->getArrayCopy();
+
+            $data = array_map(function ($image) {
+                return ImageModel::getImageArray($image);
+            }, $images);
+        }
         $container = $this->container;
 
         return array_map(function ($image) use ($container) {
@@ -37,19 +50,21 @@ class SearchModel extends AbstractModel
             ])->setData($image);
 
             return $model;
-        }, $data->getResults());
+        }, $data);
     }
 
     public function getTotal()
     {
         $state = $this->getState()->getValues();
-        $page = 1;
 
-        if (isset($state['offset']) && !empty($state['offset'])) {
-            $page = ($state['offset'] / $state['limit']) + $page;
+        if (isset($state['q']) && !empty($state['q'])) {
+            $data = \Crew\Unsplash\Search::photos($state['q'], 1, $state['limit']);
+            $total = $data->getTotal();
+        } else {
+            $data = \Crew\Unsplash\Photo::all(1, $state['limit']);
+            $total = $data->totalObjects();
         }
 
-        $data = \Crew\Unsplash\Search::photos($state['q'], $page, $state['limit']);
-        return $data->getTotal();
+        return $total;
     }
 }
