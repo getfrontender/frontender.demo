@@ -22,10 +22,14 @@
         {% block meta %} {% endblock %}
         {% block stylesheets %} {% endblock %}
         {% block scripts %} {% endblock %}
+
+        {{ renderAssets('styles')|raw }}
     </head>
     <body class="{{[config.container_class]|join('  |  ') }}" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
         {% for container in containers %}
             {% include container.template with container %}
         {% endfor %}
+
+        {{ renderAssets('beforeBodyEnd')|raw }}
     </body>
 </html>

@@ -1,7 +1,7 @@
 {
     "value": "div",
     "label": {
-        "en": "Container tag"
+        "en-GB": "Container tag"
     },
     "hidden": "0",
     "access": "all",
@@ -10,43 +10,43 @@
         {
             "value": "div",
             "label": {
-                "en": "<div>"
+                "en-GB": "<div>"
             }
         },
         {
             "value": "section",
             "label": {
-                "en": "<section>"
+                "en-GB": "<section>"
             }
         },
         {
             "value": "article",
             "label": {
-                "en": "<article>"
+                "en-GB": "<article>"
             }
         },
         {
             "value": "header",
             "label": {
-                "en": "<header>"
+                "en-GB": "<header>"
             }
         },
         {
             "value": "aside",
             "label": {
-                "en": "<aside>"
+                "en-GB": "<aside>"
             }
         },
         {
             "value": "nav",
             "label": {
-                "en": "<nav>"
+                "en-GB": "<nav>"
             }
         },
         {
             "value": "footer",
             "label": {
-                "en": "<footer>"
+                "en-GB": "<footer>"
             }
         }
     ]

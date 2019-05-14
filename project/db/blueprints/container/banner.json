@@ -1,37 +1,61 @@
 {
-    "frontender": "1557733868",
-    "template": "demo/containers/banner/banner.html.twig",
-    "name": {
-        "en-GB": "Banner"
-    },
-    "description": {
-        "en-GB": "Banner container"
-    },
-    "template_config": {
-        "content": {
-            "label": {
-                "en-GB": "Content"
-            },
-            "controls": {
-                "image": {
-                    "value": {
-                        "en-GB": "https://images.unsplash.com/photo-1557654522-b5573cc4dad9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                    },
-                    "label": {
-                        "en-GB": "Banner image"
-                    },
-                    "control": "core/text"
-                },
-                "title": {
-                    "value": {
-                        "en-GB": "This is Road Trip"
-                    },
-                    "label": {
-                        "en-GB": "Title"
-                    },
-                    "control": "core/text"
-                },
-                "button": {
+	"frontender": "1557733868",
+	"template": "demo/containers/banner/banner.html.twig",
+	"name": {
+		"en-GB": "Banner"
+	},
+	"description": {
+		"en-GB": "Banner container"
+	},
+	"template_config": {
+		"model": {
+			"label": {
+				"en-GB": "Content"
+			},
+			"controls": {
+				"data": {
+					"value": {
+						"adapter": "Unsplash",
+						"model": "Image\\Search",
+						"id": {
+							"en-GB": "yXmjBxvkoG4"
+						}
+					},
+					"label": {
+						"en-GB": "Banner image"
+					},
+					"control": "core/abstract",
+					"type": "lookup",
+					"adapters": [
+						{
+							"value": "Unsplash",
+							"label": "Unsplash",
+							"models": [
+								{
+									"value": "Image\\Search",
+									"label": "Image"
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"content": {
+			"label": {
+				"en-GB": "Content"
+			},
+			"controls": {
+				"title": {
+					"value": {
+						"en-GB": "This is Road Trip"
+					},
+					"label": {
+						"en-GB": "Title"
+					},
+					"control": "core/text"
+				},
+				"button": {
 					"value": {
 						"label": {
 							"en-GB": "Learn more"
@@ -39,31 +63,31 @@
 						"page": "",
 						"id": ""
 					},
-                    "label": {
-                        "en-GB": "Button"
-                    },
+					"label": {
+						"en-GB": "Button"
+					},
 					"control": "core/route"
 				}
-            }
-        },
-        "config": {
-            "label": {
-                "en-GB": "Settings"
-            },
-            "controls": {
-                "container_tag": {
+			}
+		},
+		"config": {
+			"label": {
+				"en-GB": "Settings"
+			},
+			"controls": {
+				"container_tag": {
 					"value": "section",
-					"control": "project/container_tag"
+					"control": "container_tag"
 				},
-                "container_class": {
-                    "value": "bg-img",
-                    "label": {
-                        "en-GB": "Container class"
-                    },
-                    "control": "core/text"
-                }
-            }
-        }
-    },
-    "containers": []
+				"container_class": {
+					"value": "bg-img",
+					"label": {
+						"en-GB": "Container class"
+					},
+					"control": "core/text"
+				}
+			}
+		}
+	},
+	"containers": []
 }

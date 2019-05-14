@@ -1,55 +1,79 @@
 {
-    "frontender": "1557733872",
-    "template": "demo/containers/post/post.html.twig",
-    "name": {
-        "en-GB": "Post"
-    },
-    "description": {
-        "en-GB": "Simple post container"
-    },
-    "template_config": {
-        "content": {
-            "label": {
-                "en-GB": "Content"
-            },
-            "controls": {
-                "image": {
-                    "value": {
-                        "en-GB": "https://images.unsplash.com/photo-1557502706-5a0e03129173?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1309&q=80"
-                    },
-                    "label": {
-                        "en-GB": "Banner image"
-                    },
-                    "control": "core/text"
-                },
-                "title": {
-                    "value": {
-                        "en-GB": "Nibh non lobortis mus nibh"
-                    },
-                    "label": {
-                        "en-GB": "Title"
-                    },
-                    "control": "core/text"
-                },
-                "body": {
-                    "value": {
-                        "en-GB": "Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.."
-                    },
-                    "label": {
-                        "en-GB": "Post body"
-                    },
-                    "control": "core/markdown"
-                },
-                "date": {
-                    "value": {
-                        "en-GB": "01.01.2017"
-                    },
-                    "label": {
-                        "en-GB": "Date"
-                    },
-                    "control": "core/text"
-                },
-                "button": {
+	"frontender": "1557733877",
+	"template": "demo/containers/post/post.html.twig",
+	"name": {
+		"en-GB": "Post"
+	},
+	"description": {
+		"en-GB": "Simple post container"
+	},
+	"template_config": {
+		"model": {
+			"label": {
+				"en-GB": "Content"
+			},
+			"controls": {
+				"data": {
+					"value": {
+						"adapter": "Unsplash",
+						"model": "Image\\Search",
+						"id": {
+							"en-GB": "yXmjBxvkoG4"
+						}
+					},
+					"label": {
+						"en-GB": "Banner image"
+					},
+					"control": "core/abstract",
+					"type": "lookup",
+					"adapters": [
+						{
+							"value": "Unsplash",
+							"label": "Unsplash",
+							"models": [
+								{
+									"value": "Image\\Search",
+									"label": "Image"
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"content": {
+			"label": {
+				"en-GB": "Content"
+			},
+			"controls": {
+				"title": {
+					"value": {
+						"en-GB": "Nibh non lobortis mus nibh"
+					},
+					"label": {
+						"en-GB": "Title"
+					},
+					"control": "core/text"
+				},
+				"body": {
+					"value": {
+						"en-GB": "Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.."
+					},
+					"label": {
+						"en-GB": "Post body"
+					},
+					"control": "core/markdown"
+				},
+				"date": {
+					"value": {
+						"en-GB": "01.01.2017"
+					},
+					"label": {
+						"en-GB": "Date"
+					},
+					"control": "core/text"
+				},
+				"button": {
 					"value": {
 						"label": {
 							"en-GB": "Read more"
@@ -57,27 +81,27 @@
 						"page": "",
 						"id": ""
 					},
-                    "label": {
-                        "en-GB": "Button"
-                    },
+					"label": {
+						"en-GB": "Button"
+					},
 					"control": "core/route"
 				}
-            }
-        },
-        "config": {
-            "label": {
-                "en-GB": "Settings"
-            },
-            "controls": {
-                "container_class": {
-                    "value": "wrapper post bg-img",
-                    "label": {
-                        "en-GB": "Container class"
-                    },
-                    "control": "core/text"
-                }
-            }
-        }
-    },
-    "containers": []
+			}
+		},
+		"config": {
+			"label": {
+				"en-GB": "Settings"
+			},
+			"controls": {
+				"container_class": {
+					"value": "wrapper post bg-img",
+					"label": {
+						"en-GB": "Container class"
+					},
+					"control": "core/text"
+				}
+			}
+		}
+	},
+	"containers": []
 }

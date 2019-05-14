@@ -19,7 +19,7 @@
     the background image.
 -->
 
-<{{ config.container_tag|default('section') }} class="{{[config.container_class]|join('  |  ') }}" data-bg="{{ content.image|t(locales) }}" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('section') }} class="{{[config.container_class]|join('  |  ') }}" data-bg="{{ model.urls.regular }}" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     <div class="inner">
         <article class="box">
             {% if content.title|t(locales) %}
@@ -31,7 +31,7 @@
 
             {% if content.body|t(locales) %}
                 <div class="content">
-                    {{ content.body|t(locales)|markdown }}
+                    {{ content.body|t(locales)|markdown|raw }}
                 </div>
             {% endif %}
 
