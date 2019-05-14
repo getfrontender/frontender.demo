@@ -5,7 +5,7 @@
     "map": {
         "id": "id",
         "title": "description",
-        "description": "alt_description",
+        "description": "user.name",
         "datePublished": "created_at",
         "dateModified": "updated_at",
         "thumbnail": "urls.thumb"
