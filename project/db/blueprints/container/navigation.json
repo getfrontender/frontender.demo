@@ -12,36 +12,38 @@
             "label": {
                 "en-GB": "Content"
             },
-            "links": {
-				"value": [
-					{
-						"label": {
-							"en-GB": "Home"
-						},
-						"page": "home",
-						"id": ""
-					},
-					{
-						"label": {
-							"en-GB": "Demo menu"
-						},
-						"page": "#",
-						"id": ""
-					},
-					{
-						"label": {
-							"en-GB": "Demo item"
-						},
-						"page": "#",
-						"id": ""
-					}
-				],
-				"label": {
-					"en-GB": "Links"
-				},
-				"control": "core/route",
-				"repeatable": true
-			}
+            "controls": {
+                "links": {
+    				"value": [
+    					{
+    						"label": {
+    							"en-GB": "Home"
+    						},
+    						"page": "home",
+    						"id": ""
+    					},
+    					{
+    						"label": {
+    							"en-GB": "Demo menu"
+    						},
+    						"page": "#",
+    						"id": ""
+    					},
+    					{
+    						"label": {
+    							"en-GB": "Demo item"
+    						},
+    						"page": "#",
+    						"id": ""
+    					}
+    				],
+    				"label": {
+    					"en-GB": "Links"
+    				},
+    				"control": "core/route",
+    				"repeatable": true
+    			}
+            }
         },
         "config": {
             "label": {
