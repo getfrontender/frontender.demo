@@ -12,7 +12,7 @@ class ImageModel extends AbstractModel
         parent::__construct($container);
 
         $this->getState()
-            ->insert('id', 'int', null, true);
+            ->insert('id', null, true);
     }
 
     public function fetch()

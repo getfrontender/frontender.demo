@@ -15,13 +15,24 @@ class SearchModel extends AbstractModel
         $this->getState()
             ->insert('q')
             ->insert('limit', 20)
-            ->insert('skip');
+            ->insert('skip')
+            ->insert('id');
     }
 
     public function fetch()
     {
         $state = $this->getState()->getValues();
         $page = 1;
+
+        if(isset($state['id'])) {
+            // Return the image model.
+            $model = new ImageModel($this->container);
+            $model->setState([
+                'id' => $state['id']
+            ]);
+
+            return $model->fetch();
+        }
 
         if (isset($state['skip']) && !empty($state['skip'])) {
             $page = ($state['skip'] / $state['limit']) + $page;
