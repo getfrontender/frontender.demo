@@ -31,7 +31,7 @@ class ImageModel extends AbstractModel
     public static function getImageArray($data)
     {
         $image = [];
-        $properties = ['id', 'created_at', 'updated_at', 'width', 'height', 'color', 'description', 'alt_description', 'urls'];
+        $properties = ['id', 'created_at', 'updated_at', 'width', 'height', 'color', 'description', 'alt_description', 'urls', 'user'];
 
         foreach ($properties as $property) {
             $image[$property] = $data->{$property};
