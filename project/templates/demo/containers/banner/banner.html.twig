@@ -26,7 +26,4 @@
             </header>
         </div>
     {% endif %}
-    {% if content.button.label|t(locales) %}
-        <a href="{{ content.button.page|t(locales) }}" class="more">{{ content.button.label|t(locales) }}</a>
-    {% endif %}
 </{{ config.container_tag|default('section') }}>
