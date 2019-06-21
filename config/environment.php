@@ -7,24 +7,24 @@
  */
 
 return [
-	/* Cache */
+    /* Cache */
     'caching' => 1,
     'cachetime' => 1800, // In seconds
 
-	/* Debug */
+    /* Debug */
     'debug' => 0,
     'translation_debug' => 0,
 
-	/* Maintanance */
+    /* Maintanance */
     'offline' => 0,
 
-	/* Slim settings */
+    /* Slim settings */
     'determineRouteBeforeAppMiddleware' => true,
 
-	/* ID separator */
+    /* ID separator */
     'id_separator' => '-fid',
 
-	/* Project settings */
+    /* Project settings */
     'project' => [
         'path' => ROOT_PATH . '/project'
     ],
@@ -36,5 +36,6 @@ return [
             'path' => ROOT_PATH . '/cache/twig'
         ],
         'debug' => true
-    ]
+    ],
+    'fem_host' => getenv('FEM_HOST') ?: 'http://manager.getfrontender.com'
 ];
