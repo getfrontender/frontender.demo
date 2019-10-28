@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>framed-f-dot</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 L60,0 L60,60 L0,60 L0,0 Z M20,44 L27,44 L27,34.0612658 L36,34.0612658 L36,28.3487884 L27,28.3487884 L27,22.7124774 L37,22.7124774 L37,17 L20,17 L20,44 Z M41,45 C43.209139,45 45,43.209139 45,41 C45,38.790861 43.209139,37 41,37 C38.790861,37 37,38.790861 37,41 C37,43.209139 38.790861,45 41,45 Z" id="framed-f-dot" fill="#FFE550"></path>
+    </g>
+</svg>
