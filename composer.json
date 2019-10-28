@@ -7,24 +7,15 @@
         }
     ],
     "require": {
-        "frontender/platform-core": "dev-feature/dist",
+        "frontender/platform-core": "dev-release/2.0.0",
         "unsplash/unsplash": "^2.4"
     },
     "autoload": {
         "psr-4": {
-            "Prototype\\": "lib/"
+            "Frontender\\Platform\\": "lib/"
         }
     },
     "scripts": {
-        "post-create-project-cmd": [
-            "Frontender\\Core\\Installer\\Platform::install"
-        ],
-        "post-install-cmd": [
-            "Frontender\\Core\\Installer\\Platform::install"
-        ],
-        "post-update-cmd": [
-            "Frontender\\Core\\Installer\\Platform::install"
-        ],
         "install-project": [
             "Frontender\\Core\\Installer\\Project::import"
         ]

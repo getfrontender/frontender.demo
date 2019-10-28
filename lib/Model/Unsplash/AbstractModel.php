@@ -1,6 +1,6 @@
 <?php
 
-namespace Prototype\Model\Unsplash;
+namespace Frontender\Platform\Unsplash;
 
 use Slim\Container;
 use Frontender\Core\Model\AbstractModel as FrontenderAbstractModel;

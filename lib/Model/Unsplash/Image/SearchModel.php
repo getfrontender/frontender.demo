@@ -1,10 +1,10 @@
 <?php
 
-namespace Prototype\Model\Unsplash\Image;
+namespace Frontender\Platform\Model\Unsplash\Image;
 
 use Slim\Container;
-use Prototype\Model\Unsplash\ImageModel;
-use Prototype\Model\Unsplash\AbstractModel;
+use Frontender\Platform\Unsplash\ImageModel;
+use Frontender\Platform\Unsplash\AbstractModel;
 
 class SearchModel extends AbstractModel
 {
