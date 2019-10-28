@@ -3,7 +3,7 @@
      * @file
      * Defaults
      * @package     Frontender Platform
-     * @subpackage  Demo Project
+     * @subpackage  Road-trip Project
      * @author      Jeroen Leijten
      * @license     MIT License
      * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
@@ -25,7 +25,7 @@
 
         {{ renderAssets('styles')|raw }}
     </head>
-    <body class="{{[config.container_class]|join('  |  ') }}" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    <body class="{{[config.container_class]|join('  |  ') }} {{ config.cupcake }}" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
         {% for container in containers %}
             {% include container.template with container %}
         {% endfor %}

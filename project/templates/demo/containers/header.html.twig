@@ -3,7 +3,7 @@
      * @file
      * Defaults
      * @package     Frontender Platform
-     * @subpackage  Demo Project
+     * @subpackage  Road-trip Project
      * @author      Jeroen Leijten
      * @license     MIT License
      * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
@@ -13,11 +13,31 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('header') }} class="{{[config.container_class]|join('  |  ') }}" id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
-    {% if content.title.label|t(locales) %}
+<{{ config.container_tag|default('header') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    {% if content.title.label|t %}
         <div class="logo">
-            <a href="{{ route({'page': content.title.page }) }}">{{ content.title.label|t(locales) }}</a>
+            <a href="{{ route({'page': content.title.page }) }}">{{ content.title.label|t }}</a>
         </div>
     {% endif %}
+
+    <!-- Menu toggle -->
     <a href="#menu"><span>Menu</span></a>
+
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="{{ route({'page': '/' }) }}">Home</a></li>
+            <li><a href="{{ route({'page': '/how-frontender-works' }) }}">How it works</a></li>
+            <li><a href="{{ route({'page': '/documentation' }) }}">Documentation</a></li>
+
+            <!-- @TODO replace with correct my.getfrontender link -->
+            <li><a href="https://brickson.nl" target="_blank">Login</a></li>
+
+            <!-- @TODO replace with correct download link -->
+            <li><a href="https://brickson.nl" target="_blank">Download</a></li>
+            
+            {% for link in content.links %}
+                <li><a href="{{ route({'page': link.page }) }}">{{ link.label|t }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
 </{{ config.container_tag|default('header') }}>

@@ -3,7 +3,7 @@
      * @file
      * Defaults
      * @package     Frontender Platform
-     * @subpackage  Demo Project
+     * @subpackage  Road-trip Project
      * @author      Jeroen Leijten
      * @license     MIT License
      * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
@@ -15,29 +15,28 @@
 
 <!--
     Note: To show a background image, set the "data-bg" attribute below
-    to the url of your image. This is used in each section to set
-    the background image.
+    to the url of your image.
 -->
 
-<{{ config.container_tag|default('section') }} class="{{[config.container_class]|join('  |  ') }}" data-bg="{{ model.urls.regular }}" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('section') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     <div class="inner">
         <article class="box">
-            {% if content.title|t(locales) %}
+            {% if content.title|t %}
                 <header>
-                    <h2>{{ content.title|t(locales) }}</h2>
-                    <p>{{ content.date|t(locales) }}</p>
+                    <h1>{{ content.title|t }}</h1>
+                    <p>{{ content.date|t }}</p>
                 </header>
             {% endif %}
 
-            {% if content.body|t(locales) %}
+            {% if content.body|t %}
                 <div class="content">
-                    {{ content.body|t(locales)|markdown|raw }}
+                    {{ content.body|t|markdown|raw }}
                 </div>
             {% endif %}
 
-            {% if content.button.label|t(locales) %}
+            {% if content.button.label|t %}
                 <footer>
-                    <a href="{{ content.button.page|t(locales) }}" class="button alt">{{ content.button.label|t(locales) }}</a>
+                    <a href="{{ content.button.page|t }}" class="button alt">{{ content.button.label|t }}</a>
                 </footer>
             {% endif %}
         </article>

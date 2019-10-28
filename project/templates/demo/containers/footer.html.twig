@@ -3,7 +3,7 @@
      * @file
      * Defaults
      * @package     Frontender Platform
-     * @subpackage  Demo Project
+     * @subpackage  Road-trip Project
      * @author      Jeroen Leijten
      * @license     MIT License
      * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
@@ -13,13 +13,11 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('footer') }} class="{{[config.container_class]|join('  |  ') }}" id="footer" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('footer') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} id="footer" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     <div class="inner">
-
-        <h2>{{ content.title|t(locales) }}</h2>
+        <h2>{{ content.title|t }}</h2>
 
         <form action="#" method="post">
-
             <div class="field half first">
                 <label for="name">Name</label>
                 <input name="name" id="name" type="text" placeholder="Name">
@@ -38,14 +36,25 @@
         </form>
 
         <ul class="icons">
-            <li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+            {% for icon in content.icons %}
+                <li>
+                    <a href="{{ icon.page|t }}" target="_blank" class="icon {{ icon.icon_size }} {{ icon.icon }}">
+                        {% if icon.label|t %}
+                            <span class="label">{{ icon.label|t }}</span>
+                        {% endif %}
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
 
         <div class="copyright">
-            {{ content.copyright|t(locales) }} <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+            <div class="footer__accreditation accreditation">
+                <p class="accreditation__copyright"><small>Images supplied by <a href="https://unsplash.com" target="_blank" rel="nofollow">Unsplash</a>. Template by <a href="https://templated.co" target="_blank" rel="nofollow">TEMPLATED</a></small></p><!--
+                --><p class="accreditation__attribution">
+                    <img class="attribution__brand" src="https://development.getfrontender.brickson.kitchen.local/assets/images/brand/f-dot-framed-theme.png" alt="Framed Frontender logo">
+                    <small>Made with Frontender</small>
+                </p>
+            </div>
         </div>
-
     </div>
 </{{ config.container_tag|default('footer') }}>

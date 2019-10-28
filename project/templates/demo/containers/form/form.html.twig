@@ -1,0 +1,70 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Jeroen Leijten
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+<{{ config.container_tag|default('section') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} id="form" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    {% if content.title|t %}
+        <h3>{{ content.title|t }}</h3>
+    {% endif %}
+
+    {# <form method="post" action="#"> #}
+    <form>
+        <div class="row uniform">
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="name" id="name" value="" placeholder="Name">
+            </div>
+            <div class="6u$ 12u$(xsmall)">
+                <input type="email" name="email" id="email" value="" placeholder="Email">
+            </div>
+
+            <div class="12u$">
+                <div class="select-wrapper">
+                    <select name="category" id="category">
+                        <option value="">- Category -</option>
+                        {% for option in content.select %}
+                            <option value="{{ option|t|lower|replace({' ': '-'}) }}">{{ option|t }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="12u$">
+                {% for radio in content.radio %}
+                    <div class="4u 12u$(small)">
+                        <input type="radio" id="{{ radio|t|lower|replace({' ': '-'}) }}" name="priority" checked="">
+                        <label for="{{ radio|t|lower|replace({' ': '-'}) }}">{{ radio|t }}</label>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% for checkbox in content.checkbox %}
+                <div class="6u 12u$(small)">
+                    <input type="checkbox" id="{{ checkbox|t|lower|replace({' ': '-'}) }}" name="{{ checkbox|t|lower|replace({' ': '-'}) }}">
+                    <label for="{{ checkbox|t|lower|replace({' ': '-'}) }}">{{ checkbox|t }}</label>
+                </div>
+            {% endfor %}
+
+            <div class="12u$">
+                <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+            </div>
+
+            <div class="12u$">
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message"></li>
+                    <li><input type="reset" value="Reset" class="alt"></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</{{ config.container_tag|default('section') }}>
