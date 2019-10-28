@@ -1,9 +1,8 @@
 <?php
 
-namespace Frontender\Platform\Unsplash;
+namespace Frontender\Platform\Model\Unsplash;
 
 use Slim\Container;
-use Frontender\Core\Model\AbstractModel;
 
 class ImageModel extends AbstractModel
 {

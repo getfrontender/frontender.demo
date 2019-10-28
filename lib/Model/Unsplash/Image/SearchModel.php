@@ -3,8 +3,8 @@
 namespace Frontender\Platform\Model\Unsplash\Image;
 
 use Slim\Container;
-use Frontender\Platform\Unsplash\ImageModel;
-use Frontender\Platform\Unsplash\AbstractModel;
+use Frontender\Platform\Model\Unsplash\ImageModel;
+use Frontender\Platform\Model\Unsplash\AbstractModel;
 
 class SearchModel extends AbstractModel
 {
