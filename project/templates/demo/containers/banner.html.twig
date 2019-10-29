@@ -1,0 +1,37 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+<!--
+    Note: To show a background image, set the "data-bg" attribute below
+    to the url of your image.
+-->
+
+{% import "macros/template.html.twig" as helper %}
+
+<{{ config.container_tag|default('div') }}
+    {% if content.show_bg|default(1) and model.urls.raw %}data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80"{% endif %} 
+    {{ helper.class_attribute(config, ['banner']|join('  |  ')|trim)|raw }}
+    {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    {% if content.title|t %}
+    <div class="inner">
+        <h1>{{ content.title|default( {"en-GB": "A taste of Frontender"})|t }}</h1>
+        {% if content.show_payoff|default(1) %}
+        <p class="attribution">
+            <img class="attribution__brand" src="/assets/images/brand/f-dot-framed-theme.png"
+                alt="{{ "Picture of the Frontender logo"|i18n }}">
+            <a class="attribution__payoff" href="https://getfrontender.com" rel="follow">{{ "Made with Frontender"|i18n }}</a>
+        </p>
+        {% endif %}
+    </div>
+    {% endif %}
+</{{ config.container_tag|default('div') }}>

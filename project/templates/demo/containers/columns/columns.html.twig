@@ -20,7 +20,10 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['container']|join('  |  ')|trim)|raw }} id="article" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('div') }}
+ {{ helper.class_attribute(config, ['container']|join('  |  ')|trim)|raw }}
+ {{ helper.container_id_attribute(frontender, 'frontender')|raw }}
+ id="article" >
 
     {% if content.body|length %}
         {% if content.title|t or (content.title|t and content.standfirst|t) %}

@@ -13,10 +13,11 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('header') }} {{ helper.class_attribute(config, ['mainnav', config.show_backdrop ? "alt" : ""]|join('  |  ')|trim)|raw }} id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
-    {% if content.title.label|t %}
+<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['masthead', (page_config.subpage == true ? "subpage" : "")]|join('  |  ')|trim)|raw }} id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    
+    {% if config.show_header|default(true) %}
         <div class="logo">
-            <a href="{{ route({'page': content.title.page }) }}">{{ content.title.label|t }}</a>
+            <a href="{{ route() }}">{{ "Frontender"|i18n }} <span>{{ "Demo Website"|i18n }}</span></a>
         </div>
     {% endif %}
 
@@ -34,10 +35,10 @@
 
             <!-- @TODO replace with correct download link -->
             <li><a href="https://brickson.nl" target="_blank">Download</a></li>
-            
+
             {% for link in content.links %}
-                <li><a href="{{ route({'page': link.page }) }}">{{ link.label|t }}</a></li>
+            <li><a href="{{ route({'page': link.page }) }}">{{ link.label|t }}</a></li>
             {% endfor %}
         </ul>
     </nav>
-</{{ config.container_tag|default('header') }}>
+</{{ config.container_tag|default('div') }}>

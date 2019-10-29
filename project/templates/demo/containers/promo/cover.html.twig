@@ -18,27 +18,37 @@
     to the url of your image.
 -->
 
-<{{ config.container_tag|default('section') }} id="post" {{ helper.class_attribute(config, ['banner wrapper bg-img']|join('  |  ')|trim)|raw }} data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('div') }}
+ {% if content.show_bg|default(1) and model.urls.raw %}data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80"{% endif %}
+ {{ helper.class_attribute(config, ['post', 'wrapper']|join('  |  ')|trim)|raw }}
+ {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     <div class="inner">
         <article class="box">
-            {% if content.title|t %}
+            {% if content.title|t and content.catch_phrase|t %}
                 <header>
                     <h1>{{ content.title|t }}</h1>
                     <p>{{ content.date|t }}</p>
                 </header>
+            {% else %}
+            <div class="header">
+                {% if content.title|t %}
+                    <h1>{{ content.title|t }}</h1>
+                {% endif %}
+                {% if content.catch_phrase|t %}
+                    <p>{{ content.date|t }}</p>
+                {% endif %}
+            </div>
             {% endif %}
-
             {% if content.body|t %}
                 <div class="content">
                     {{ content.body|t|markdown|raw }}
                 </div>
             {% endif %}
-
-            {% if content.button.label|t %}
+            {% if content.button.page|t %}
                 <footer>
-                    <a href="{{ content.button.page|t }}" class="button alt">{{ content.button.label|t }}</a>
+                    <a href="{{ content.button.page|t }}" class="button alt">{{ content.button.label|default({"en-GB": "Read more"})|t }}</a>
                 </footer>
             {% endif %}
         </article>
     </div>
-</{{ config.container_tag|default('section') }}>
+</{{ config.container_tag|default('div') }}>

@@ -1682,7 +1682,7 @@
 
 	p {
 		margin: 0 0 2em 0;
-	}
+    }
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
@@ -3587,7 +3587,7 @@
 
 /* Banner */
 
-	#banner {
+	.banner {
 		display: -ms-flexbox;
 		-ms-flex-pack: center;
 		-ms-flex-align: center;
@@ -3604,19 +3604,21 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
 		border-top: 0;
 		min-height: 100vh;
 		height: 100vh;
 		position: relative;
 		text-align: center;
 		overflow: hidden;
-	}
+    }
+        [data-bg] {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
 
-		#banner .inner {
+		.banner .inner {
 			-moz-transform: scale(1.0);
 			-webkit-transform: scale(1.0);
 			-ms-transform: scale(1.0);
@@ -3630,7 +3632,7 @@
 			z-index: 2;
 		}
 
-		#banner h1 {
+		.banner h1 {
 			font-size: 7em;
 			line-height: 1.1;
 			font-family: "Lobster", cursive;
@@ -3640,7 +3642,7 @@
 			text-transform: none;
 		}
 
-		#banner p {
+		.banner p {
 			color: rgba(255, 255, 255, 0.85);
 			font-size: 1.75em;
 		}
@@ -3685,7 +3687,7 @@
 		}
 	}
 
-		#banner .more {
+		.banner .more {
 			-moz-transition: height 0.2s ease;
 			-webkit-transition: height 0.2s ease;
 			-ms-transition: height 0.2s ease;
@@ -3713,7 +3715,7 @@
 			text-decoration: none;
 		}
 
-			#banner .more:before {
+			.banner .more:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				font-family: FontAwesome;
@@ -3722,17 +3724,17 @@
 				text-transform: none !important;
 			}
 
-			#banner .more:hover {
+			.banner .more:hover {
 				background: none;
 				color: rgba(255, 255, 255, 0.5);
 				box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5);
 			}
 
-				#banner .more:hover:before {
+				.banner .more:hover:before {
 					color: rgba(255, 255, 255, 0.5);
 				}
 
-			#banner .more:before {
+			.banner .more:before {
 				content: '\f107';
 				color: #FFF;
 				font-size: 2em;
@@ -3741,7 +3743,7 @@
 				bottom: -.075em;
 			}
 
-		#banner:before {
+		.banner:before {
 			-moz-transition: opacity 3s ease;
 			-webkit-transition: opacity 3s ease;
 			-ms-transition: opacity 3s ease;
@@ -3764,11 +3766,11 @@
 
 		@media screen and (max-width: 980px) {
 
-			#banner {
+			.banner {
 				font-size: .85em;
 			}
 
-				#banner br {
+				.banner br {
 					display: none;
 				}
 
@@ -3776,13 +3778,13 @@
 
 		@media screen and (max-width: 736px) {
 
-			#banner {
+			.banner {
 				background-attachment: scroll;
 				min-height: 0;
 				padding: 8em 2em 4em 2em;
 			}
 
-				#banner h1 {
+				.banner h1 {
 					font-size: 6em;
 				}
 
@@ -3790,17 +3792,17 @@
 
 		@media screen and (max-width: 480px) {
 
-			#banner h1 {
+			.banner h1 {
 				font-size: 4em;
 			}
 
-			#banner .more {
+			.banner .more {
 				display: none;
 			}
 
 		}
 
-		body.is-loading #banner .inner {
+		body.is-loading .banner .inner {
 			-moz-transform: scale(0.99);
 			-webkit-transform: scale(0.99);
 			-ms-transform: scale(0.99);
@@ -3808,7 +3810,7 @@
 			opacity: 0;
 		}
 
-		body.is-loading #banner:before {
+		body.is-loading .banner:before {
 			opacity: 1;
 		}
 
@@ -4461,4 +4463,20 @@
 }
     .trailer-inside--double {
         padding-bottom: 2em;
+    }
+
+/* Attribution */
+
+.attribution {
+    text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
+}
+    .attribution__brand {
+        display: inline;
+        height: .8em;
+    }
+    .attribution__payoff,
+    .attribution__slogan {
+        text-decoration: none;
+        opacity: 1;
+        color: inherit;
     }

@@ -13,7 +13,6 @@
 
 {% extends 'demo/layouts/base.html.twig' %}
 
-
 {% block title %}
     <title>{{ page_config.seo.controls.title.value|t }}</title>
 {% endblock %}
@@ -28,14 +27,14 @@
     {% endif %}
 {% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ hashedPath('/assets/styles/main.css') }}" rel="stylesheet"></link>
+{% endblock %}
+
 {% block scripts %}
 {{ '/assets/scripts/jquery.min.js'|addScript('beforeBodyEnd') }}
 {{ '/assets/scripts/jquery.scrollex.min.js'|addScript('beforeBodyEnd') }}
 {{ '/assets/scripts/skel.min.js'|addScript('beforeBodyEnd') }}
 {{ '/assets/scripts/util.js'|addScript('beforeBodyEnd') }}
 {{ '/assets/scripts/main.js'|addScript('beforeBodyEnd') }}
-{% endblock %}
-
-{% block stylesheets %}
-{{ '/assets/styles/main.css'|addStyle('styles') }}
 {% endblock %}

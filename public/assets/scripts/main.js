@@ -70,19 +70,9 @@
 
 		// Get BG Image
 
-			if ( $( ".bg-img" ).length ) {
-
-				$( ".bg-img" ).each(function() {
-
-					var post 	= $(this),
-						bg 		= post.data('bg');
-
-					post.css( 'background-image', 'url(' + bg + ')' );
-
-				});
-
-
-			}
+        $("[data-bg]").each(function () {
+            $(this).css('background-image', 'url(' + $(this).data('bg') + ')');
+        });
 
 		// Posts
 
