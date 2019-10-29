@@ -2728,16 +2728,21 @@
 		margin: 0 0 1.5em 0;
 	}
 
-	header h2 + p {
+    .header h2 + p,
+    header h2 + p {
 		font-size: 1.25em;
 		margin-top: -1em;
 	}
 
+    .header h3 + p,
 	header h3 + p {
 		font-size: 1.1em;
 		margin-top: -0.8em;
 	}
 
+    .header h4 + p,
+    .header h5 + p,
+    .header h6 + p,
 	header h4 + p,
 	header h5 + p,
 	header h6 + p {
@@ -2745,6 +2750,7 @@
 		margin-top: -0.6em;
 	}
 
+    .header p,
 	header p {
 		color: rgba(255, 255, 255, 0.5);
 	}
@@ -4428,4 +4434,31 @@
 				padding: 3em 0 1em 0;
 			}
 
-		}
+        }
+        
+/* Leaders and trailers */
+
+.leader {
+    margin-top: 1em;
+}
+    .leader--double {
+        margin-top: 2em;
+    }
+.leader-inside {
+    padding-top: 1em;
+}
+    .leader-inside--double {
+        padding-top: 2em;
+    }
+.trailer {
+    margin-bottom: 1em;
+}
+    .trailer--double {
+        margin-bottom: 2em;
+    }
+.trailer-inside {
+    padding-bottom: 1em;
+}
+    .trailer-inside--double {
+        padding-bottom: 2em;
+    }
