@@ -21,28 +21,35 @@
 {% import "macros/template.html.twig" as helper %}
 
 <{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} id="article" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
-    {% if content.title|t %}
-        <h2>{{ content.title|t }}</h2>
-    {% endif %}
-    {% if content.standfirst|t %}
-        <p>{{ content.standfirst|t }}</p>
-    {% endif %}
 
-    <div class="row">
-        {% for entry in content.body %}
-            <div class="{{ columns_map|slice(config.columns|default(3) - 1)|first }}">
-                {% if entry.title|t %}
-                    <h3>{{ entry.title|t }}</h3>
-                {% endif %}
-                {% if entry.body|t %}
-                    <p>{{ entry.body|t }}</p>
-                {% endif %}
+    {% if content.body|length %}
+        {% if content.title|t or (content.title|t and content.standfirst|t) %}
+            <header class="8u 12u$(large) trailer--double">
+                <h2>{{ content.title|t }}</h2>
+                {{ content.standfirst|t|md|raw }}
+            </header>
+        {% elseif content.title|t or content.standfirst|t %}
+            <div class="header trailer">
+                <h2>{{ content.title|t }}</h2>
+                {{ content.standfirst|t|md|raw }}
             </div>
-            {% if loop.index is divisible by( config.columns|default(3) ) %}
-                </div>
-                <div class="row">
-            {% endif %}
-        {% endfor %}
-    </div>
+        {% endif %}
 
+        <div class="row">
+            {% for entry in content.body %}
+                <div class="{{ columns_map|slice(config.columns|default(3) - 1)|first }}">
+                    {% if entry.title|t %}
+                        <h3>{{ entry.title|t }}</h3>
+                    {% endif %}
+                    {% if entry.body|t %}
+                        {{ entry.body|t|md|raw }}
+                    {% endif %}
+                </div>
+                {% if loop.index is divisible by( config.columns|default(3) ) %}
+                    </div>
+                    <div class="row">
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
 </{{ config.container_tag|default('div') }}>
