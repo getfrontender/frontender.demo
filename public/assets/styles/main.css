@@ -3327,7 +3327,7 @@
 		}
 	}
 
-	.mainnav {
+	.masthead {
 		background-color: transparent;
 		color: #fdd1d1;
 		cursor: default;
@@ -3342,12 +3342,12 @@
 		padding: 0 1.5em;
 	}
 
-		.mainnav.alt {
+		.masthead.alt {
 			top: 0;
 			background: #F64747;
 		}
 
-		.mainnav .logo {
+		.masthead .logo {
 			display: inline-block;
 			height: inherit;
 			left: 1.5em;
@@ -3358,24 +3358,24 @@
 			top: 0;
 		}
 
-			.mainnav .logo a {
+			.masthead .logo a {
 				font-size: 1.25em;
 				color: #fff;
 				font-weight: 600;
 				text-decoration: none;
 			}
 
-				.mainnav .logo a:hover {
+				.masthead .logo a:hover {
 					color: #fff;
 				}
 
-			.mainnav .logo span {
+			.masthead .logo span {
 				font-weight: 300;
 				font-size: .8em;
 				color: #FFF;
 			}
 
-		.mainnav > a {
+		.masthead > a {
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
@@ -3385,7 +3385,7 @@
 			text-decoration: none;
 		}
 
-			.mainnav > a[href="#menu"] {
+			.masthead > a[href="#menu"] {
 				text-decoration: none;
 				-webkit-tap-highlight-color: transparent;
 				background: rgba(255, 255, 255, 0.15);
@@ -3397,7 +3397,7 @@
 				text-align: center;
 			}
 
-				.mainnav > a[href="#menu"]:before {
+				.masthead > a[href="#menu"]:before {
 					content: "";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
@@ -3407,23 +3407,23 @@
 					text-transform: none !important;
 				}
 
-				.mainnav > a[href="#menu"]:hover {
+				.masthead > a[href="#menu"]:hover {
 					color: rgba(255, 255, 255, 0.25);
 					background: none;
 					box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
 				}
 
-				.mainnav > a[href="#menu"]:before {
+				.masthead > a[href="#menu"]:before {
 					margin: 0;
 				}
 
-				.mainnav > a[href="#menu"] span {
+				.masthead > a[href="#menu"] span {
 					display: none;
 				}
 
 			@media screen and (max-width: 736px) {
 
-				.mainnav > a {
+				.masthead > a {
 					padding: 0 0.5em;
 				}
 
@@ -3435,16 +3435,16 @@
 			padding-top: 50px;
 		}
 
-		.mainnav {
+		.masthead {
 			height: 50px;
 			line-height: 50px;
 		}
 
-			.mainnav > h1 {
+			.masthead > h1 {
 				left: 1em;
 			}
 
-				.mainnav > h1 a {
+				.masthead > h1 a {
 					font-size: 1em;
 				}
 
@@ -3452,7 +3452,7 @@
 
 	@media screen and (max-width: 480px) {
 
-		.mainnav {
+		.masthead {
 			min-width: 320px;
 			top: 0;
 			font-size: .9em;
