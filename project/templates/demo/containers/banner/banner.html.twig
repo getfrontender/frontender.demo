@@ -18,7 +18,7 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('section') }} id="banner" data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80" {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('section') }} id="banner" data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80" {{ helper.class_attribute(config, ['bg-img']|join('  |  ')|trim)|raw }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     {% if content.title|t %}
         <div class="inner">
             <div>
