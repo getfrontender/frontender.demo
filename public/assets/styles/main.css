@@ -3327,7 +3327,7 @@
 		}
 	}
 
-	#header {
+	.mainnav {
 		background-color: transparent;
 		color: #fdd1d1;
 		cursor: default;
@@ -3342,12 +3342,12 @@
 		padding: 0 1.5em;
 	}
 
-		#header.alt {
+		.mainnav.alt {
 			top: 0;
 			background: #F64747;
 		}
 
-		#header .logo {
+		.mainnav .logo {
 			display: inline-block;
 			height: inherit;
 			left: 1.5em;
@@ -3358,24 +3358,24 @@
 			top: 0;
 		}
 
-			#header .logo a {
+			.mainnav .logo a {
 				font-size: 1.25em;
 				color: #fff;
 				font-weight: 600;
 				text-decoration: none;
 			}
 
-				#header .logo a:hover {
+				.mainnav .logo a:hover {
 					color: #fff;
 				}
 
-			#header .logo span {
+			.mainnav .logo span {
 				font-weight: 300;
 				font-size: .8em;
 				color: #FFF;
 			}
 
-		#header > a {
+		.mainnav > a {
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
@@ -3385,7 +3385,7 @@
 			text-decoration: none;
 		}
 
-			#header > a[href="#menu"] {
+			.mainnav > a[href="#menu"] {
 				text-decoration: none;
 				-webkit-tap-highlight-color: transparent;
 				background: rgba(255, 255, 255, 0.15);
@@ -3397,7 +3397,7 @@
 				text-align: center;
 			}
 
-				#header > a[href="#menu"]:before {
+				.mainnav > a[href="#menu"]:before {
 					content: "";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
@@ -3407,23 +3407,23 @@
 					text-transform: none !important;
 				}
 
-				#header > a[href="#menu"]:hover {
+				.mainnav > a[href="#menu"]:hover {
 					color: rgba(255, 255, 255, 0.25);
 					background: none;
 					box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
 				}
 
-				#header > a[href="#menu"]:before {
+				.mainnav > a[href="#menu"]:before {
 					margin: 0;
 				}
 
-				#header > a[href="#menu"] span {
+				.mainnav > a[href="#menu"] span {
 					display: none;
 				}
 
 			@media screen and (max-width: 736px) {
 
-				#header > a {
+				.mainnav > a {
 					padding: 0 0.5em;
 				}
 
@@ -3435,16 +3435,16 @@
 			padding-top: 50px;
 		}
 
-		#header {
+		.mainnav {
 			height: 50px;
 			line-height: 50px;
 		}
 
-			#header > h1 {
+			.mainnav > h1 {
 				left: 1em;
 			}
 
-				#header > h1 a {
+				.mainnav > h1 a {
 					font-size: 1em;
 				}
 
@@ -3452,7 +3452,7 @@
 
 	@media screen and (max-width: 480px) {
 
-		#header {
+		.mainnav {
 			min-width: 320px;
 			top: 0;
 			font-size: .9em;
@@ -3814,18 +3814,18 @@
 
 /* Banner */
 
-	#post {
+	.banner {
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 	}
 
-		#post .inner {
+		.banner .inner {
 			margin: 0 auto;
 		}
 
-		#post .button.icon {
+		.banner .button.icon {
 			padding: 0;
 			width: 3em;
 			height: 3em;
@@ -3834,41 +3834,41 @@
 			text-align: center;
 		}
 
-			#post .button.icon:before {
+			.banner .button.icon:before {
 				margin-right: 0;
 				color: #FFF;
 			}
 
-			#post .button.icon.fa-chevron-left:before {
+			.banner .button.icon.fa-chevron-left:before {
 				margin-left: -3px;
 			}
 
-			#post .button.icon.fa-chevron-right:before {
+			.banner .button.icon.fa-chevron-right:before {
 				margin-left: 3px;
 			}
 
-		#post ul.actions li {
+		.banner ul.actions li {
 			width: 49.5%;
 			margin: 0;
 			padding: 0;
 		}
 
-			#post ul.actions li:first-child {
+			.banner ul.actions li:first-child {
 				text-align: left;
 			}
 
-			#post ul.actions li:last-child {
+			.banner ul.actions li:last-child {
 				text-align: right;
 			}
 
 		@media screen and (max-width: 736px) {
 
-			#post {
+			.banner {
 				background-attachment: scroll;
 				background-size: cover;
 			}
 
-				#post h2 {
+				.banner h2 {
 					font-size: 1.5em;
 				}
 
@@ -3876,7 +3876,7 @@
 
 		@media screen and (max-width: 480px) {
 
-			#post ul.actions li {
+			.banner ul.actions li {
 				display: inline-block;
 				width: 49%;
 				margin: 0;
