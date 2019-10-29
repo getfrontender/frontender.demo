@@ -18,7 +18,7 @@
     to the url of your image.
 -->
 
-<{{ config.container_tag|default('section') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('section') }} id="post" {{ helper.class_attribute(config, ['banner wrapper bg-img']|join('  |  ')|trim)|raw }} data-bg="{{ model.urls.raw }}&fit=crop?crop=faces&w=1480&q=80" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     <div class="inner">
         <article class="box">
             {% if content.title|t %}
