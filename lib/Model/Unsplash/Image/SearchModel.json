@@ -14,6 +14,15 @@
         "description": {
             "en-GB": "Show description"
         },
+        "has_preview": true,
+        "filters": {
+            "q": {
+                "label": {
+                    "en-GB": "Search term"
+                },
+                "type": "search"
+            }
+        },
         "thumbnail": {
             "en-GB": "Show thumbnail"
         }
