@@ -1583,7 +1583,9 @@
 		}
 
 	.inner {
-		width: 60em;
+        width: 60em;
+        margin-right: auto;
+        margin-left: auto;
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -4186,227 +4188,226 @@
 
 /* Footer */
 
-	#footer {
-		background-color: #F64747;
-		color: #fdd1d1;
+	.footer {
+		/* color: #fdd1d1; */
 		padding: 6em 0 4em 0;
-		background: #F64747;
+		background: none;
 	}
 
-		#footer input, #footer select, #footer textarea {
+		.footer input, .footer select, .footer textarea {
 			color: #ffffff;
 		}
 
-		#footer a {
+		.footer a {
 			color: #ffffff;
 		}
 
-		#footer strong, #footer b {
+		.footer strong, .footer b {
 			color: #ffffff;
 		}
 
-		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+		.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
 			color: #ffffff;
 		}
 
-		#footer blockquote {
+		.footer blockquote {
 			border-left-color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer code {
+		.footer code {
 			background: rgba(255, 255, 255, 0.075);
 			border-color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer hr {
+		.footer hr {
 			border-bottom-color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer input[type="submit"],
-		#footer input[type="reset"],
-		#footer input[type="button"],
-		#footer button,
-		#footer .button {
+		.footer input[type="submit"],
+		.footer input[type="reset"],
+		.footer input[type="button"],
+		.footer button,
+		.footer .button {
 			background-color: #5a5a5a;
 			color: #ffffff !important;
 		}
 
-			#footer input[type="submit"]:hover,
-			#footer input[type="reset"]:hover,
-			#footer input[type="button"]:hover,
-			#footer button:hover,
-			#footer .button:hover {
+			.footer input[type="submit"]:hover,
+			.footer input[type="reset"]:hover,
+			.footer input[type="button"]:hover,
+			.footer button:hover,
+			.footer .button:hover {
 				background-color: #676767;
 			}
 
-			#footer input[type="submit"]:active,
-			#footer input[type="reset"]:active,
-			#footer input[type="button"]:active,
-			#footer button:active,
-			#footer .button:active {
+			.footer input[type="submit"]:active,
+			.footer input[type="reset"]:active,
+			.footer input[type="button"]:active,
+			.footer button:active,
+			.footer .button:active {
 				background-color: #4d4d4d;
 			}
 
-			#footer input[type="submit"].alt,
-			#footer input[type="reset"].alt,
-			#footer input[type="button"].alt,
-			#footer button.alt,
-			#footer .button.alt {
+			.footer input[type="submit"].alt,
+			.footer input[type="reset"].alt,
+			.footer input[type="button"].alt,
+			.footer button.alt,
+			.footer .button.alt {
 				background-color: transparent;
 				box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
 				color: #ffffff !important;
 			}
 
-				#footer input[type="submit"].alt:hover,
-				#footer input[type="reset"].alt:hover,
-				#footer input[type="button"].alt:hover,
-				#footer button.alt:hover,
-				#footer .button.alt:hover {
+				.footer input[type="submit"].alt:hover,
+				.footer input[type="reset"].alt:hover,
+				.footer input[type="button"].alt:hover,
+				.footer button.alt:hover,
+				.footer .button.alt:hover {
 					background-color: rgba(255, 255, 255, 0.075);
 				}
 
-				#footer input[type="submit"].alt:active,
-				#footer input[type="reset"].alt:active,
-				#footer input[type="button"].alt:active,
-				#footer button.alt:active,
-				#footer .button.alt:active {
+				.footer input[type="submit"].alt:active,
+				.footer input[type="reset"].alt:active,
+				.footer input[type="button"].alt:active,
+				.footer button.alt:active,
+				.footer .button.alt:active {
 					background-color: rgba(255, 255, 255, 0.2);
 				}
 
-				#footer input[type="submit"].alt.icon:before,
-				#footer input[type="reset"].alt.icon:before,
-				#footer input[type="button"].alt.icon:before,
-				#footer button.alt.icon:before,
-				#footer .button.alt.icon:before {
+				.footer input[type="submit"].alt.icon:before,
+				.footer input[type="reset"].alt.icon:before,
+				.footer input[type="button"].alt.icon:before,
+				.footer button.alt.icon:before,
+				.footer .button.alt.icon:before {
 					color: #fbb5b5;
 				}
 
-			#footer input[type="submit"].special,
-			#footer input[type="reset"].special,
-			#footer input[type="button"].special,
-			#footer button.special,
-			#footer .button.special {
+			.footer input[type="submit"].special,
+			.footer input[type="reset"].special,
+			.footer input[type="button"].special,
+			.footer button.special,
+			.footer .button.special {
 				background-color: #ffffff;
 				color: #F64747 !important;
 			}
 
-		#footer label {
+		.footer label {
 			color: #ffffff;
 		}
 
-		#footer input[type="text"],
-		#footer input[type="password"],
-		#footer input[type="email"],
-		#footer select,
-		#footer textarea {
+		.footer input[type="text"],
+		.footer input[type="password"],
+		.footer input[type="email"],
+		.footer select,
+		.footer textarea {
 			background: rgba(255, 255, 255, 0.075);
 			border-color: rgba(255, 255, 255, 0.25);
 		}
 
-			#footer input[type="text"]:focus,
-			#footer input[type="password"]:focus,
-			#footer input[type="email"]:focus,
-			#footer select:focus,
-			#footer textarea:focus {
+			.footer input[type="text"]:focus,
+			.footer input[type="password"]:focus,
+			.footer input[type="email"]:focus,
+			.footer select:focus,
+			.footer textarea:focus {
 				border-color: #ffffff;
 				box-shadow: 0 0 0 1px #ffffff;
 			}
 
-		#footer .select-wrapper:before {
+		.footer .select-wrapper:before {
 			color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer input[type="checkbox"] + label,
-		#footer input[type="radio"] + label {
+		.footer input[type="checkbox"] + label,
+		.footer input[type="radio"] + label {
 			color: #fdd1d1;
 		}
 
-			#footer input[type="checkbox"] + label:before,
-			#footer input[type="radio"] + label:before {
+			.footer input[type="checkbox"] + label:before,
+			.footer input[type="radio"] + label:before {
 				background: rgba(255, 255, 255, 0.075);
 				border-color: rgba(255, 255, 255, 0.25);
 			}
 
-		#footer input[type="checkbox"]:checked + label:before,
-		#footer input[type="radio"]:checked + label:before {
+		.footer input[type="checkbox"]:checked + label:before,
+		.footer input[type="radio"]:checked + label:before {
 			background-color: #ffffff;
 			border-color: #ffffff;
 			color: #F64747;
 		}
 
-		#footer input[type="checkbox"]:focus + label:before,
-		#footer input[type="radio"]:focus + label:before {
+		.footer input[type="checkbox"]:focus + label:before,
+		.footer input[type="radio"]:focus + label:before {
 			border-color: #ffffff;
 			box-shadow: 0 0 0 1px #ffffff;
 		}
 
-		#footer ::-webkit-input-placeholder {
+		.footer ::-webkit-input-placeholder {
 			color: #fbb5b5 !important;
 		}
 
-		#footer :-moz-placeholder {
+		.footer :-moz-placeholder {
 			color: #fbb5b5 !important;
 		}
 
-		#footer ::-moz-placeholder {
+		.footer ::-moz-placeholder {
 			color: #fbb5b5 !important;
 		}
 
-		#footer :-ms-input-placeholder {
+		.footer :-ms-input-placeholder {
 			color: #fbb5b5 !important;
 		}
 
-		#footer .formerize-placeholder {
+		.footer .formerize-placeholder {
 			color: #fbb5b5 !important;
 		}
 
-		#footer ul.alt li {
+		.footer ul.alt li {
 			border-top-color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer header p {
+		.footer header p {
 			color: #fbb5b5;
 		}
 
-		#footer table tbody tr {
+		.footer table tbody tr {
 			border-color: rgba(255, 255, 255, 0.25);
 		}
 
-			#footer table tbody tr:nth-child(2n + 1) {
+			.footer table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(255, 255, 255, 0.075);
 			}
 
-		#footer table th {
+		.footer table th {
 			color: #ffffff;
 		}
 
-		#footer table thead {
+		.footer table thead {
 			border-bottom-color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer table tfoot {
+		.footer table tfoot {
 			border-top-color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer table.alt tbody tr td {
+		.footer table.alt tbody tr td {
 			border-color: rgba(255, 255, 255, 0.25);
 		}
 
-		#footer .inner {
+		.footer .inner {
 			margin: 0 auto;
 		}
 
-		#footer h2 {
+		.footer h2 {
 			margin-bottom: 2em;
 			text-align: center;
 		}
 
-		#footer .icons {
+		.footer .icons {
 			text-align: center;
 			padding-top: 1em;
 		}
 
-		#footer .copyright {
+		.footer .copyright {
 			color: rgba(255, 255, 255, 0.5);
 			font-size: 0.8em;
 			margin: 0 0 2em 0;
@@ -4414,7 +4415,7 @@
 			text-align: center;
 		}
 
-		#footer .icon.round {
+		.footer .icon.round {
 			display: block;
 			background: rgba(255, 255, 255, 0.15);
 			border-radius: 100%;
@@ -4424,7 +4425,7 @@
 			color: #FFF;
 		}
 
-			#footer .icon.round:hover {
+			.footer .icon.round:hover {
 				color: rgba(255, 255, 255, 0.25);
 				background: none;
 				box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
@@ -4432,7 +4433,7 @@
 
 		@media screen and (max-width: 736px) {
 
-			#footer {
+			.footer {
 				padding: 3em 0 1em 0;
 			}
 
@@ -4480,3 +4481,4 @@
         opacity: 1;
         color: inherit;
     }
+    
