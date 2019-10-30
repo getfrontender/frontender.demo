@@ -27,6 +27,10 @@ class ImageModel extends AbstractModel
         return [$model];
     }
 
+    public function getPropertyTitle() {
+        return $this['description'] ?? $this['alt_description'];
+    }
+
     public static function getImageArray($data)
     {
         $image = [];

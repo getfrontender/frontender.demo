@@ -4,7 +4,7 @@
     },
     "map": {
         "id": "id",
-        "title": "description",
+        "title": "title",
         "description": "user.name",
         "datePublished": "created_at",
         "dateModified": "updated_at",
