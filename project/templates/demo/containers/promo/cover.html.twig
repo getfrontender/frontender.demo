@@ -27,7 +27,7 @@
             {% if content.title|t and content.catch_phrase|t %}
                 <header>
                     <h1>{{ content.title|t }}</h1>
-                    <p>{{ content.date|t }}</p>
+                    <p>{{ content.catch_phrase|t }}</p>
                 </header>
             {% else %}
             <div class="header">
@@ -35,7 +35,7 @@
                     <h1>{{ content.title|t }}</h1>
                 {% endif %}
                 {% if content.catch_phrase|t %}
-                    <p>{{ content.date|t }}</p>
+                    <p>{{ content.catch_phrase|t }}</p>
                 {% endif %}
             </div>
             {% endif %}

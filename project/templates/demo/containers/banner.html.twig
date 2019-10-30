@@ -29,7 +29,7 @@
         <p class="attribution">
             <img class="attribution__brand" src="/assets/images/brand/f-dot-framed-theme.png"
                 alt="{{ "Picture of the Frontender logo"|i18n }}">
-            <a class="attribution__payoff" href="https://getfrontender.com" rel="follow">{{ "Made with Frontender"|i18n }}</a>
+            <a class="attribution__payoff" href="https://getfrontender.com" rel="follow">{{ content.subtitle|default( {"en-GB": "Made with Frontender"})|t }}</a>
         </p>
         {% endif %}
     </div>
