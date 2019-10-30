@@ -28,12 +28,27 @@ class SearchModel extends AbstractModel
 
         if(isset($state['id'])) {
             // Return the image model.
-            $model = new ImageModel($this->container);
-            $model->setState([
-                'id' => $state['id']
-            ]);
+            if(!is_array($state['id'])) {
+                $model = new ImageModel($this->container);
+                $model->setState([
+                    'id' => $state['id']
+                ]);
 
-            return $model->fetch();
+                return $model->fetch();
+            } else {
+                $container = $this->container;
+
+                return array_map(function($id) use($container) {
+                    $model = new ImageModel($container);
+                    $model->setState([
+                        'id' => $id
+                    ]);
+
+                    $images = $model->fetch();
+
+                    return array_shift($images);
+                }, $state['id']);
+            }
         }
 
         if (isset($state['skip']) && !empty($state['skip'])) {
