@@ -13,7 +13,7 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['masthead', (page_config.subpage == true ? "subpage" : "")]|join('  |  ')|trim)|raw }} id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['masthead', (page_config.subpage == true ? "alt" : "")]|join('  |  ')|trim)|raw }} id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
     
     {% if config.show_header|default(true) %}
         <div class="logo">
