@@ -13,7 +13,7 @@ class SearchModel extends AbstractModel
         parent::__construct($container);
 
         $this->getState()
-            ->insert('q')
+            ->insert('q', 'cats', false)
             ->insert('orientation')
             ->insert('limit', 20)
             ->insert('skip')
