@@ -11,6 +11,32 @@
         "thumbnail": "urls.thumb"
     },
     "filters": {
+        "orientation": {
+            "label": {
+                "en-GB": "Orientation"
+            },
+            "icon": "mobile-portrait",
+            "options": [
+                {
+                    "value": "landscape",
+                    "label": {
+                        "en-GB": "Landscape"
+                    }
+                },
+                {
+                    "value": "portrait",
+                    "label": {
+                        "en-GB": "Portrait"
+                    }
+                },
+                {
+                    "value": "squarish",
+                    "label": {
+                        "en-GB": "Squarish"
+                    }
+                }
+            ]
+        },
         "q": {
             "label": {
                 "en-GB": "Search term"
