@@ -13,7 +13,8 @@ class SearchModel extends AbstractModel
         parent::__construct($container);
 
         $this->getState()
-            ->insert('q')
+            ->insert('q', 'cats', false)
+            ->insert('orientation')
             ->insert('limit', 20)
             ->insert('skip')
             ->insert('id');
@@ -23,6 +24,7 @@ class SearchModel extends AbstractModel
     {
         $state = $this->getState()->getValues();
         $page = 1;
+        $orientation = null;
 
         if(isset($state['id'])) {
             // Return the image model.
@@ -38,11 +40,12 @@ class SearchModel extends AbstractModel
             $page = ($state['skip'] / $state['limit']) + $page;
         }
 
-        error_log(print_r($state, 1));
-        error_log($page);
-
         if (isset($state['q']) && !empty($state['q'])) {
-            $data = \Crew\Unsplash\Search::photos($state['q'], $page, $state['limit']);
+            if(isset($state['orientation']) && !empty($state['orientation'])) {
+                $orientation = $state['orientation'];
+            }
+
+            $data = \Crew\Unsplash\Search::photos($state['q'], $page, $state['limit'], $orientation);
             $data = $data->getResults();
         } else {
             $data = \Crew\Unsplash\Photo::all($page, $state['limit']);

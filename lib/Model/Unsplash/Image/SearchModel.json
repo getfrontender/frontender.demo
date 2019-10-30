@@ -10,22 +10,39 @@
         "dateModified": "updated_at",
         "thumbnail": "urls.thumb"
     },
-    "display_options": {
-        "description": {
-            "en-GB": "Show description"
-        },
-        "has_preview": true,
-        "filters": {
-            "q": {
-                "label": {
-                    "en-GB": "Search term"
+    "filters": {
+        "orientation": {
+            "label": {
+                "en-GB": "Orientation"
+            },
+            "icon": "mobile-portrait",
+            "options": [
+                {
+                    "value": "landscape",
+                    "label": {
+                        "en-GB": "Landscape"
+                    }
                 },
-                "type": "search"
-            }
+                {
+                    "value": "portrait",
+                    "label": {
+                        "en-GB": "Portrait"
+                    }
+                },
+                {
+                    "value": "squarish",
+                    "label": {
+                        "en-GB": "Squarish"
+                    }
+                }
+            ]
         },
-        "thumbnail": {
-            "en-GB": "Show thumbnail"
+        "q": {
+            "label": {
+                "en-GB": "Search term"
+            },
+            "type": "search"
         }
     },
-    "display_attributes": ["description", "thumbnail", "datePublished"]
+    "has_preview": true
 }
