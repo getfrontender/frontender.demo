@@ -1,0 +1,20 @@
+{#
+    /**
+     * @file        image.html.twig
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% macro crop(object, config = {}, class = "") %}
+
+    {% set config = {w: 640, h: 480, fit: "crop", crop: "faces", q: 80}|merge(config)|key_value_join("=") %}
+    {# {% set config = image.get_config %} #}
+
+    <pre>{{ [object.urls.raw, config]|join("&") }}</pre>
+
+{% endmacro %}
