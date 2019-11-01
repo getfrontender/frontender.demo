@@ -14,6 +14,10 @@ class ArrayFilter extends \Twig_Extension
     public function keyValueJoin(array $array = [], string $separator = '='): array {
         $newArray = [];
 
+        $array = array_filter($array, function($value) {
+            return !!$value;
+        });
+
         foreach($array as $key => $value) {
             $newArray[] = $key . $separator . $value;
         }
