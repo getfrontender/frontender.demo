@@ -1,0 +1,60 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+{#
+    Description:
+    Container for a single body of text with a configurable image.
+
+    Template configurations:
+    Alignment: left|right
+
+    Placement: box
+    Allow placement: none
+#}
+
+<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['row']|join('  |  ')|trim)|raw }}{{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+    {% if content.image_alignment|default("right") == "left" %}
+    <div class="6u 12u$(medium)">
+        {% if model.urls.regular %}
+        <span class="image fit">
+            <img src="{{ model.urls.raw }}&fit=crop?crop=faces&w=750&q=80" alt="{{ model.description }}">
+        </span>
+        {% endif %}
+    </div>
+    {% endif %}
+    <div class="6u 12u$(medium)">
+        {% if content.title|t %}
+        <h2>{{ content.title|t }}</h2>
+        {% endif %}
+        {% if content.body|t %}
+        {{ content.body|t|markdown|raw }}
+        {% endif %}
+        {% if content.button.page|t %}
+        <footer>
+            <a href="{{ content.button.page|t }}"
+                class="button alt">{{ content.button.label|default({"en-GB": "Read more"})|t }}</a>
+        </footer>
+        {% endif %}
+    </div>
+    {% if content.image_alignment|default("right") == "right" %}
+    <div class="6u 12u$(medium)">
+        {% if model.urls.regular %}
+        <span class="image fit">
+            <img src="{{ model.urls.raw }}&fit=crop?crop=faces&w=750&q=80" alt="{{ model.description }}">
+        </span>
+        {% endif %}
+    </div>
+    {% endif %}
+</{{ config.container_tag|default('div') }}>

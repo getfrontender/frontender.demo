@@ -1,0 +1,46 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+{#
+    Description:
+
+    Full width container for texts. Contains a nested container for bodies of texts.
+
+    Variations:
+
+    With background image
+    Without background image
+
+    Template configurations:
+    
+    post: true|false (only for background image variant)
+    width: "inner"|"container"
+    style: none|style1|style2
+
+    Placement: fullwidth
+    Allow placement: box
+
+#}
+<{{ config.container_tag|default("div") }}
+    {{ helper.class_attribute(config, ["wrapper","post post--transparent", config.theme ]|join(" ")|trim)|raw }}
+    {{ helper.container_id_attribute(frontender, "frontender")|raw }}>
+    <div class="{{ ["inner", config.width, config.alignment]|join(" ") }}">
+        <div class="box box--transparent">
+            {% for container in containers %}
+                {% include container.template with container %}
+            {% endfor %}
+        </div>
+    </div>
+</{{ config.container_tag|default("div") }}>

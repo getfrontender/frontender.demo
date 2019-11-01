@@ -1,0 +1,338 @@
+{
+    "frontender": "288a93622e0c099696f0daa34eff325d",
+    "template": "demo/containers/wrapper.html.twig",
+    "name": {
+        "en-GB": "Wrapper"
+    },
+    "description": {
+        "en-GB": "Full width container for texts. Contains a nested container for bodies of texts."
+    },
+    "template_config": {
+        "config": {
+            "label": {
+                "en-GB": "Settings"
+            },
+            "controls": {
+                "container_tag": {
+                    "value": "div",
+                    "control": "project/container_tag"
+                },
+                "container_class": {
+                    "value": "",
+                    "control": "project/container_class"
+                },
+                "theme": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Background colour"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Default (dark grey)"
+                            }
+                        },
+                        {
+                            "value": "style1",
+                            "label": {
+                                "en-GB": "Theme (coral)"
+                            }
+                        },
+                        {
+                            "value": "style2",
+                            "label": {
+                                "en-GB": "Neutral (grey)"
+                            }
+                        }
+                    ]
+                },
+                "alignment": {
+                    "value": "align-left",
+                    "label": {
+                        "en-GB": "Text alignment"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "align-left",
+                            "label": {
+                                "en-GB": "Align left"
+                            }
+                        },
+                        {
+                            "value": "align-center",
+                            "label": {
+                                "en-GB": "Align center"
+                            }
+                        },
+                        {
+                            "value": "align-right",
+                            "label": {
+                                "en-GB": "Align right"
+                            }
+                        }
+                    ]
+                },
+                "width": {
+                    "value": "container",
+                    "label": {
+                        "en-GB": "Content width"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Narrower"
+                            }
+                        },
+                        {
+                            "value": "container",
+                            "label": {
+                                "en-GB": "Wider"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "containers": [
+        {
+            "frontender": "4f3164dafec897567ee5f9ccd465e178",
+            "template": "demo/containers/layout/columns.html.twig",
+            "name": {
+                "en-GB": "Columns"
+            },
+            "description": {
+                "en-GB": "Container for bodies of texts with configurable layout."
+            },
+            "template_config": {
+                "content": {
+                    "label": {
+                        "en-GB": "Content"
+                    },
+                    "controls": {
+                        "body": {
+                            "value": [
+                                {
+                                    "en-GB": "## Component Library\nAvoid brand inconsistency by creating pages from a library of templates and styles. Create new interactions and try new content combinations on-the-fly."
+                                }
+                            ],
+                            "label": {
+                                "en-GB": "Body"
+                            },
+                            "control": "core/markdown",
+                            "repeatable": true,
+                            "at_least": 1
+                        }
+                    }
+                },
+                "config": {
+                    "label": {
+                        "en-GB": "Settings"
+                    },
+                    "controls": {
+                        "container_tag": {
+                            "value": "header",
+                            "control": "project/container_tag"
+                        },
+                        "container_class": {
+                            "value": "",
+                            "control": "project/container_class"
+                        },
+                        "columns": {
+                            "value": "1",
+                            "label": {
+                                "en-GB": "Columns"
+                            },
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": 1,
+                                    "label": {
+                                        "en-GB": "1 Column"
+                                    }
+                                },
+                                {
+                                    "value": 2,
+                                    "label": {
+                                        "en-GB": "2 Columns"
+                                    }
+                                },
+                                {
+                                    "value": 3,
+                                    "label": {
+                                        "en-GB": "3 Columns"
+                                    }
+                                },
+                                {
+                                    "value": 4,
+                                    "label": {
+                                        "en-GB": "4 Columns"
+                                    }
+                                }
+                            ]
+                        },
+                        "alignment": {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Text alignment"
+                            },
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": "",
+                                    "label": {
+                                        "en-GB": "Inherit"
+                                    }
+                                },
+                                {
+                                    "value": "align-left",
+                                    "label": {
+                                        "en-GB": "Align left"
+                                    }
+                                },
+                                {
+                                    "value": "align-center",
+                                    "label": {
+                                        "en-GB": "Align center"
+                                    }
+                                },
+                                {
+                                    "value": "align-right",
+                                    "label": {
+                                        "en-GB": "Align right"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "containers": [],
+            "blueprint": "5ce7eb30f7269c8d544f2add"
+        },
+        {
+            "frontender": "4f3164dafec897567ee5f9ccd465e177",
+            "template": "demo/containers/layout/columns.html.twig",
+            "name": {
+                "en-GB": "Columns"
+            },
+            "description": {
+                "en-GB": "Container for bodies of texts with configurable layout."
+            },
+            "template_config": {
+                "content": {
+                    "label": {
+                        "en-GB": "Content"
+                    },
+                    "controls": {
+                        "body": {
+                            "value": [
+                                {
+                                    "en-GB": "### Component Library\nAvoid brand inconsistency by creating pages from a library of templates and styles. Create new interactions and try new content combinations on-the-fly."
+                                },
+                                {
+                                    "en-GB": "### Live preview\nPreview your pages in real-time and with real content, and share them with your co-workers and stakeholders to get immediate feedback."
+                                },
+                                {
+                                    "en-GB": "### Version control\nKeep track of all revisions of your pages and publish quickly for conversion testing or seasonal updates."
+                                },
+                                {
+                                    "en-GB": "### Multi-everything\nManage all your websites in one system, publish content from any number of backends like a CMS, social media or your organisation’s backend and in any language."
+                                }
+                            ],
+                            "label": {
+                                "en-GB": "Body"
+                            },
+                            "control": "core/markdown",
+                            "repeatable": true,
+                            "at_least": 1
+                        }
+                    }
+                },
+                "config": {
+                    "label": {
+                        "en-GB": "Settings"
+                    },
+                    "controls": {
+                        "columns": {
+                            "value": "2",
+                            "label": {
+                                "en-GB": "Columns"
+                            },
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": 1,
+                                    "label": {
+                                        "en-GB": "1 Column"
+                                    }
+                                },
+                                {
+                                    "value": 2,
+                                    "label": {
+                                        "en-GB": "2 Columns"
+                                    }
+                                },
+                                {
+                                    "value": 3,
+                                    "label": {
+                                        "en-GB": "3 Columns"
+                                    }
+                                },
+                                {
+                                    "value": 4,
+                                    "label": {
+                                        "en-GB": "4 Columns"
+                                    }
+                                }
+                            ]
+                        },
+                        "alignment": {
+                            "value": "align-left",
+                            "label": {
+                                "en-GB": "Text alignment"
+                            },
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": "align-left",
+                                    "label": {
+                                        "en-GB": "Align left"
+                                    }
+                                },
+                                {
+                                    "value": "align-center",
+                                    "label": {
+                                        "en-GB": "Align center"
+                                    }
+                                },
+                                {
+                                    "value": "align-right",
+                                    "label": {
+                                        "en-GB": "Align right"
+                                    }
+                                }
+                            ]
+                        },
+                        "container_tag": {
+                            "value": "div",
+                            "control": "project/container_tag"
+                        },
+                        "container_class": {
+                            "value": "",
+                            "control": "project/container_class"
+                        }
+                    }
+                }
+            },
+            "containers": [],
+            "blueprint": "5ce7eb30f7269c8d544f2add"
+        }
+    ],
+    "blueprint": "5ce7eb30f7269c8d544f2add"
+}

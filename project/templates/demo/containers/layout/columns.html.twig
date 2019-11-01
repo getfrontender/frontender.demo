@@ -1,0 +1,46 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+{#
+    Description:
+    Container for bodies of texts with configurable layout.
+
+    Template configurations:
+    Alignment: left|right
+
+    Placement: box
+    Allow placement: none
+#}
+
+{% set columns_map = {
+    "1": "",
+    "2": "6u 12u$(small)",
+    "3": "4u 12u$(medium)",
+    "4": "3u 12u$(medium)"
+} %}
+
+<{{ config.container_tag|default("div") }} {{ helper.class_attribute(config, [""]|join(" ")|trim)|raw }}{{ helper.container_id_attribute(frontender, "frontender")|raw }}>
+    <div class="row">
+        {% for entry in content.body %}
+            <div class="{{ columns_map|slice(config.columns|default(3) - 1)|first }}">
+                {{ entry|t|md|raw }}
+            </div>
+            {% if loop.index is divisible by( config.columns|default(3) ) %}
+                </div>
+                <div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+</{{ config.container_tag|default("div") }}>

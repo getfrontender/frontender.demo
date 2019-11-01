@@ -1,0 +1,373 @@
+{
+    "frontender": "87516e9c67e87f2afb94f5e71ca38e39",
+    "placement": ["full-width"],
+    "allow_placement": ["box"],
+    "template": "demo/containers/wrapper.html.twig",
+    "name": {
+        "en-GB": "Wrapper"
+    },
+    "description": {
+        "en-GB": "Full width container for texts. Contains a nested container for bodies of texts."
+    },
+    "template_config": {
+        "model": {
+            "label": {
+                "en-GB": "Content"
+            },
+            "controls": {
+                "data": {
+                    "value": {
+                        "adapter": "Unsplash",
+                        "model": "Image\\Search",
+                        "id": {
+                            "en-GB": "pGM4sjt_BdQ"
+                        }
+                    },
+                    "label": {
+                        "en-GB": "Banner image"
+                    },
+                    "control": "core/abstract",
+                    "type": "lookup",
+                    "adapters": [
+                        {
+                            "value": "Unsplash",
+                            "label": "Unsplash",
+                            "models": [
+                                {
+                                    "value": "Image\\Search",
+                                    "label": "Image"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "config": {
+            "label": {
+                "en-GB": "Settings"
+            },
+            "controls": {
+                "container_tag": {
+                    "value": "div",
+                    "control": "project/container_tag"
+                },
+                "container_class": {
+                    "value": "",
+                    "control": "project/container_class"
+                },
+                "overlay": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Show overlay"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Hide"
+                            }
+                        },
+                        {
+                            "value": "post--transparent",
+                            "label": {
+                                "en-GB": "Show"
+                            }
+                        }
+                    ]
+                },
+                "alignment": {
+                    "value": "align-left",
+                    "label": {
+                        "en-GB": "Text alignment"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "align-left",
+                            "label": {
+                                "en-GB": "Align left"
+                            }
+                        },
+                        {
+                            "value": "align-center",
+                            "label": {
+                                "en-GB": "Align center"
+                            }
+                        },
+                        {
+                            "value": "align-right",
+                            "label": {
+                                "en-GB": "Align right"
+                            }
+                        }
+                    ]
+                },
+                "width": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Content width"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Narrower"
+                            }
+                        },
+                        {
+                            "value": "container",
+                            "label": {
+                                "en-GB": "Wider"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "containers": [
+        {
+            "frontender": "87516e9c67e87f2afb94f5e71ca38e40",
+            "placement": ["box"],
+            "template": "demo/containers/layout/columns.html.twig",
+            "name": {
+                "en-GB": "Columns"
+            },
+            "description": {
+                "en-GB": "Container for bodies of texts with configurable layout."
+            },
+            "template_config": {
+                "content": {
+                    "label": {
+                        "en-GB": "Content"
+                    },
+                    "controls": {
+                        "title": {
+                            "value": {
+                                "en-GB": "Elements"
+                            },
+                            "label": {
+                                "en-GB": "Title"
+                            },
+                            "control": "core/text"
+                        },
+                        "standfirst": {
+                            "value": {
+                                "en-GB": "Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing."
+                            },
+                            "label": {
+                                "en-GB": "Title"
+                            },
+                            "control": "core/markdown"
+                        },
+                        "body": {
+                            "value": [],
+                            "label": {
+                                "en-GB": "Body"
+                            },
+                            "control": "core/markdown",
+                            "repeatable": true,
+                            "at_least": 1
+                        }
+                    }
+                },
+                "config": {
+                    "label": {
+                        "en-GB": "Settings"
+                    },
+                    "controls": {
+                        "container_tag": {
+                            "value": "div",
+                            "control": "project/container_tag"
+                        },
+                        "container_class": {
+                            "value": "",
+                            "control": "project/container_class"
+                        },
+                        "columns": {
+                            "value": "3",
+                            "label": {
+                                "en-GB": "Columns"
+                            },
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": 1,
+                                    "label": {
+                                        "en-GB": "1 Column"
+                                    }
+                                },
+                                {
+                                    "value": 2,
+                                    "label": {
+                                        "en-GB": "2 Columns"
+                                    }
+                                },
+                                {
+                                    "value": 3,
+                                    "label": {
+                                        "en-GB": "3 Columns"
+                                    }
+                                },
+                                {
+                                    "value": 4,
+                                    "label": {
+                                        "en-GB": "4 Columns"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "containers": [],
+            "blueprint": "5ce7eb30f7269c8d544f2add"
+        },
+        {
+            "frontender": "ed062aacf6d2e0aa67ab4e72fb67ed1f",
+            "placement": ["box"],
+            "template": "demo/containers/layout/post.html.twig",
+            "name": {
+                "en-GB": "Post"
+            },
+            "description": {
+                "en-GB": "A featured item container. Displays a title, body text and an image."
+            },
+            "template_config": {
+                "model": {
+                    "label": {
+                        "en-GB": "Image"
+                    },
+                    "controls": {
+                        "data": {
+                            "value": {
+                                "adapter": "Unsplash",
+                                "model": "Image\\Search",
+                                "id": {
+                                    "en-GB": "do6ouuCdsto"
+                                }
+                            },
+                            "label": {
+                                "en-GB": "Banner image"
+                            },
+                            "control": "core/abstract",
+                            "type": "lookup",
+                            "adapters": [
+                                {
+                                    "value": "Unsplash",
+                                    "label": "Unsplash",
+                                    "models": [
+                                        {
+                                            "value": "Image\\Search",
+                                            "label": "Image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                "content": {
+                    "label": {
+                        "en-GB": "Content"
+                    },
+                    "controls": {
+                        "title": {
+                            "value": {
+                                "en-GB": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                            },
+                            "label": {
+                                "en-GB": "Title"
+                            },
+                            "control": "core/text"
+                        },
+                        "body": {
+                            "value": {
+                                "en-GB": "Lorem ipsum dolor sit **accumsan** interdum nisi, quis _tincidunt_ felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor sit amet dolor consequat."
+                            },
+                            "label": {
+                                "en-GB": "Body"
+                            },
+                            "control": "core/markdown"
+                        },
+                        "image_alignment": {
+                            "value": "right",
+                            "label": {
+                                "en-GB": "Image alignment"
+                            },
+                            "options": [
+                                {
+                                    "value": "left",
+                                    "label": {
+                                        "en-GB": "Left"
+                                    }
+                                },
+                                {
+                                    "value": "right",
+                                    "label": {
+                                        "en-GB": "Right"
+                                    }
+                                }
+                            ],
+                            "type": "list",
+                            "control": "core/list"
+                        }
+                    }
+                },
+                "config": {
+                    "label": {
+                        "en-GB": "Settings"
+                    },
+                    "controls": {
+                        "container_tag": {
+                            "value": "div",
+                            "control": "project/container_tag"
+                        },
+                        "container_class": {
+                            "value": "leader-inside--double",
+                            "control": "project/container_class"
+                        },
+                        "leader": {
+                            "value": "leader-inside",
+                            "control": "project/leader"
+                        },
+                        "trailer": {
+                            "value": "trailer-inside",
+                            "control": "project/trailer"
+                        },
+                        "theme": {
+                            "value": "wrapper style1",
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": "wrapper",
+                                    "label": {
+                                        "en-GB": "Default (dark background)"
+                                    }
+                                },
+                                {
+                                    "value": "wrapper style1",
+                                    "label": {
+                                        "en-GB": "Theme (theme background)"
+                                    }
+                                },
+                                {
+                                    "value": "wrapper style2",
+                                    "label": {
+                                        "en-GB": "Neutral (dark background)"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "containers": [],
+            "blueprint": "5ceba2a2f7269c9ca05e9ea3"
+        }
+    ],
+    "blueprint": "5ce7eb30f7269c8d544f2add"
+}

@@ -15,6 +15,7 @@
 {% macro class_string(config) %}
     {{ [
         config.container_class ? config.container_class,
+        config.alignment ? config.alignment,
         config.leader ? config.leader,
         config.trailer ? config.trailer
     ]|join(' ')|trim }}

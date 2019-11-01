@@ -1,0 +1,128 @@
+{
+    "frontender": "288a93622e0c099696f0daa34eff325g",
+    "template": "demo/containers/banner.html.twig",
+    "name": {
+        "en-GB": "Banner"
+    },
+    "description": {
+        "en-GB": "Full width container for texts. Contains a nested container for bodies of texts."
+    },
+    "template_config": {
+        "model": {
+            "label": {
+                "en-GB": "Content"
+            },
+            "controls": {
+                "data": {
+                    "value": {
+                        "adapter": "Unsplash",
+                        "model": "Image\\Search",
+                        "id": {
+                            "en-GB": "4ixHdlcROPI"
+                        }
+                    },
+                    "label": {
+                        "en-GB": "Banner image"
+                    },
+                    "control": "core/abstract",
+                    "type": "lookup",
+                    "adapters": [
+                        {
+                            "value": "Unsplash",
+                            "label": "Unsplash",
+                            "models": [
+                                {
+                                    "value": "Image\\Search",
+                                    "label": "Image"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "config": {
+            "label": {
+                "en-GB": "Settings"
+            },
+            "controls": {
+                "container_tag": {
+                    "value": "div",
+                    "control": "project/container_tag"
+                },
+                "container_class": {
+                    "value": "",
+                    "control": "project/container_class"
+                },
+                "overlay": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Show overlay"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "banner--transparent",
+                            "label": {
+                                "en-GB": "Hide"
+                            }
+                        },
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Show"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "containers": [
+        {
+            "frontender": "0688d6a242bbe0f731e598e7c51d0318",
+            "template": "demo/containers/layout/banner.html.twig",
+            "name": {
+                "en-GB": "Banner"
+            },
+            "description": {
+                "en-GB": "A hero container with a full screen background image and a headline."
+            },
+            "template_config": {
+                "content": {
+                    "label": {
+                        "en-GB": "Content"
+                    },
+                    "controls": {
+                        "title": {
+                            "value": {
+                                "en-GB": "A taste of Frontender"
+                            },
+                            "label": {
+                                "en-GB": "Headline"
+                            },
+                            "control": "core/text"
+                        }
+                    }
+                },
+                "config": {
+                    "label": {
+                        "en-GB": "Settings"
+                    },
+                    "controls": {
+                        "container_tag": {
+                            "value": "section",
+                            "control": "project/container_tag"
+                        },
+                        "container_class": {
+                            "value": "",
+                            "control": "project/container_class"
+                        }
+                    }
+                }
+            },
+            "containers": []
+        }
+    ],
+    "blueprint": "5ce7eb30f7269c8d544f2add"
+}

@@ -10,11 +10,14 @@
      */
 #}
 
-{% macro crop(object, config = {}, class = "") %}
+{% macro crop(image, config = {}, class = "") %}
 
+    {#  Merge the default settings with any override #}
     {% set config = {w: 640, h: 480, fit: "crop", crop: "faces", q: 80}|merge(config)|key_value_join("=") %}
-    {# {% set config = image.get_config %} #}
 
-    <pre>{{ [object.urls.raw, config]|join("&") }}</pre>
+    {# If the url contains a querypath, string the additional config using & #}
+    {% set separator = image.urls.raw|split("?")|length ? "&" : "?" %}
+
+    {{ [image.urls.raw, config|join("&")]|join(separator) }}
 
 {% endmacro %}
