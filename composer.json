@@ -4,11 +4,18 @@
             "name": "frontender/platform-core",
             "type": "vcs",
             "url": "https://github.com/DipityBV/frontender.platform-core.git"
+        },
+        {
+            "name": "frontender/wordpress-adapter",
+            "type": "path",
+            "url": "/www/frontender.project.demo/adapter"
         }
     ],
     "require": {
+        "frontender/wordpress-adapter": "*",
         "frontender/platform-core": "dev-release/2.0.0",
-        "unsplash/unsplash": "^2.4"
+        "unsplash/unsplash": "^2.4",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
