@@ -1,0 +1,27 @@
+{
+    "value": "",
+    "label": {
+        "en-GB": "Background colour"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "",
+            "label": {
+                "en-GB": "Default (dark grey)"
+            }
+        },
+        {
+            "value": "style1",
+            "label": {
+                "en-GB": "Theme (coral)"
+            }
+        },
+        {
+            "value": "style2",
+            "label": {
+                "en-GB": "Neutral (grey)"
+            }
+        }
+    ]
+}

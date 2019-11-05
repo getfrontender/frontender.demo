@@ -1,0 +1,21 @@
+{
+    "value": "",
+    "label": {
+        "en-GB": "Content width"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "",
+            "label": {
+                "en-GB": "Narrower"
+            }
+        },
+        {
+            "value": "container",
+            "label": {
+                "en-GB": "Wider"
+            }
+        }
+    ]
+}

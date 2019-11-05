@@ -1,0 +1,21 @@
+{
+    "value": "icon round",
+    "control": "core/list",
+    "label": {
+        "en-GB": "Style"
+    },
+    "options": [
+        {
+            "value": "icon",
+            "label": {
+                "en-GB": "Icon"
+            }
+        },
+        {
+            "value": "icon round",
+            "label": {
+                "en-GB": "Icon with background"
+            }
+        }
+    ]
+}

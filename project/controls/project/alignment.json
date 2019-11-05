@@ -1,0 +1,27 @@
+{
+    "value": "align-center",
+    "label": {
+        "en-GB": "Text alignment"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "align-left",
+            "label": {
+                "en-GB": "Align left"
+            }
+        },
+        {
+            "value": "align-center",
+            "label": {
+                "en-GB": "Align center"
+            }
+        },
+        {
+            "value": "align-right",
+            "label": {
+                "en-GB": "Align right"
+            }
+        }
+    ]
+}

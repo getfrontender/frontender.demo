@@ -1,0 +1,39 @@
+{
+    "value": "",
+    "label": {
+        "en-GB": "Icon"
+    },
+    "options": [
+        {
+            "value": "facebook",
+            "label": {
+                "en-GB": "Facebook"
+            }
+        },
+        {
+            "value": "twitter",
+            "label": {
+                "en-GB": "Twitter"
+            }
+        },
+        {
+            "value": "instagram",
+            "label": {
+                "en-GB": "Instagram"
+            }
+        },
+        {
+            "value": "github",
+            "label": {
+                "en-GB": "Github"
+            }
+        },
+        {
+            "value": "linkedin",
+            "label": {
+                "en-GB": "LinkedIn"
+            }
+        }
+    ],
+    "control": "core/list"
+}

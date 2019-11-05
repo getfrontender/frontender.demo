@@ -1,0 +1,33 @@
+{
+    "value": "2",
+    "label": {
+        "en-GB": "Columns"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "1",
+            "label": {
+                "en-GB": "1 Column"
+            }
+        },
+        {
+            "value": "2",
+            "label": {
+                "en-GB": "2 Columns"
+            }
+        },
+        {
+            "value": "3",
+            "label": {
+                "en-GB": "3 Columns"
+            }
+        },
+        {
+            "value": "4",
+            "label": {
+                "en-GB": "4 Columns"
+            }
+        }
+    ]
+}

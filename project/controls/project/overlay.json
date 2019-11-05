@@ -1,0 +1,21 @@
+{
+    "value": "",
+    "label": {
+        "en-GB": "Show"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "",
+            "label": {
+                "en-GB": "Show"
+            }
+        },
+        {
+            "value": "post--transparent",
+            "label": {
+                "en-GB": "Hide"
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "value": "right",
+    "label": {
+        "en-GB": "Image alignment"
+    },
+    "options": [
+        {
+            "value": "left",
+            "label": {
+                "en-GB": "Left"
+            }
+        },
+        {
+            "value": "right",
+            "label": {
+                "en-GB": "Right"
+            }
+        }
+    ],
+    "type": "list",
+    "control": "core/list"
+}

@@ -1,0 +1,21 @@
+{
+    "value": "noindex, nofollow",
+    "control": "core/list",
+    "label": {
+        "en-GB": "Show/Hide"
+    },
+    "options": [
+        {
+            "value": "1",
+            "label": {
+                "en-GB": "Show"
+            }
+        },
+        {
+            "value": "0",
+            "label": {
+                "en-GB": "Hide"
+            }
+        }
+    ]
+}
