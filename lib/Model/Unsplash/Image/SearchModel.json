@@ -1,10 +1,10 @@
 {
     "label": {
-        "en-GB": "Unsplash"
+        "en-GB": "Image"
     },
     "map": {
         "id": "id",
-        "title": "title",
+        "title": "alt_description",
         "description": "user.name",
         "datePublished": "created_at",
         "dateModified": "updated_at",
