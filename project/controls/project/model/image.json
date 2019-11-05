@@ -1,0 +1,38 @@
+{
+    "value": {
+        "adapter": "",
+        "model": "",
+        "id": ""
+    },
+    "label": {
+        "en-GB": "Image"
+    },
+    "control": "core/abstract",
+    "type": "lookup",
+    "adapters": [
+        {
+            "value": "Unsplash",
+            "label": "Unsplash",
+            "models": [
+                {
+                    "value": "Image\\Search",
+                    "label": "Image"
+                }
+            ]
+        },
+        {
+            "value": "Pirates",
+            "label": {
+                "en-GB": "Pirates (Wordpress)"
+            },
+            "models": [
+                {
+                    "value": "Media",
+                    "label": {
+                        "en-GB": "Media"
+                    }
+                }
+            ]
+        }
+    ]
+}
