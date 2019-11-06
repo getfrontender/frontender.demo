@@ -1,0 +1,62 @@
+{
+    "label": {
+        "en-GB": "Categories"
+    },
+    "map": {
+        "id": "id",
+        "title": "name"
+    },
+    "filters": {
+        "sorting": {
+            "label": {
+                "en-GB": "Sorting"
+            },
+            "icon": "funnel",
+            "options": [
+                {
+                    "value": "id,asc",
+                    "label": {
+                        "en-GB": "ID (asc)"
+                    }
+                },
+                {
+                    "value": "id,desc",
+                    "label": {
+                        "en-GB": "ID (desc)"
+                    }
+                },
+                {
+                    "value": "name,asc",
+                    "label": {
+                        "en-GB": "Name (asc)"
+                    }
+                },
+                {
+                    "value": "name,desc",
+                    "label": {
+                        "en-GB": "Name (desc)"
+                    }
+                },
+                {
+                    "value": "slug,asc",
+                    "label": {
+                        "en-GB": "Slug (asc)"
+                    }
+                },
+                {
+                    "value": "slug,desc",
+                    "label": {
+                        "en-GB": "Slug (desc)"
+                    }
+                }
+            ]
+        },
+        "search": {
+            "label": {
+                "en-GB": "Search term"
+            },
+            "type": "search"
+        }
+    },
+    "has_preview": true
+}
