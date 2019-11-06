@@ -1,0 +1,66 @@
+{
+    "label": {
+        "en-GB": "Media"
+    },
+    "map": {
+        "id": "id",
+        "title": "title.rendered",
+        "description": "description",
+        "datePublished": "date",
+        "dateModified": "modified",
+        "thumbnail": "media_details.sizes.thumbnail.source_url"
+    },
+    "filters": {
+        "sorting": {
+            "label": {
+                "en-GB": "Sorting"
+            },
+            "icon": "funnel",
+            "options": [
+                {
+                    "value": "id,asc",
+                    "label": {
+                        "en-GB": "ID (asc)"
+                    }
+                },
+                {
+                    "value": "id,desc",
+                    "label": {
+                        "en-GB": "ID (desc)"
+                    }
+                },
+                {
+                    "value": "title,asc",
+                    "label": {
+                        "en-GB": "Title (asc)"
+                    }
+                },
+                {
+                    "value": "title,desc",
+                    "label": {
+                        "en-GB": "Title (desc)"
+                    }
+                },
+                {
+                    "value": "date,asc",
+                    "label": {
+                        "en-GB": "Date added (asc)"
+                    }
+                },
+                {
+                    "value": "date,desc",
+                    "label": {
+                        "en-GB": "Date added (desc)"
+                    }
+                }
+            ]
+        },
+        "search": {
+            "label": {
+                "en-GB": "Search term"
+            },
+            "type": "search"
+        }
+    },
+    "has_preview": true
+}

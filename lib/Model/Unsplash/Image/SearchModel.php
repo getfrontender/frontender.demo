@@ -2,6 +2,7 @@
 
 namespace Frontender\Platform\Model\Unsplash\Image;
 
+use Frontender\Platform\Model\Pirates\PostsModel;
 use Slim\Container;
 use Frontender\Platform\Model\Unsplash\ImageModel;
 use Frontender\Platform\Model\Unsplash\AbstractModel;
@@ -11,6 +12,8 @@ class SearchModel extends AbstractModel
     public function __construct(Container $container)
     {
         parent::__construct($container);
+
+        $this->doTestCalls();
 
         $this->getState()
             ->insert('q', 'cats', false)

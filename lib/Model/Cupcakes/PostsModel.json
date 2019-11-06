@@ -1,0 +1,22 @@
+{
+    "label": {
+        "en-GB": "Posts"
+    },
+    "map": {
+        "id": "id",
+        "title": "title.rendered",
+        "description": "excerpt.rendered",
+        "dateModified": "modified",
+        "datePublished": "date",
+        "thumbnail": "featuredImage.sizes.thumbnail.source_url"
+    },
+    "filters": {
+        "search": {
+            "label": {
+                "en-GB": "Search term"
+            },
+            "type": "search"
+        }
+    },
+    "has_preview": true
+}
