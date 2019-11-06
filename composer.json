@@ -7,12 +7,12 @@
         },
         {
             "name": "frontender/wordpress-adapter",
-            "type": "path",
-            "url": "/www/frontender.project.demo/adapter"
+            "type": "vcs",
+            "url": "https://github.com/DipityBV/frontender.adapter.wordpress.git"
         }
     ],
     "require": {
-        "frontender/wordpress-adapter": "*",
+        "frontender/wordpress-adapter": "dev-master",
         "frontender/platform-core": "dev-release/2.0.0",
         "unsplash/unsplash": "^2.4",
         "ext-json": "*"
@@ -25,6 +25,9 @@
     "scripts": {
         "install-project": [
             "Frontender\\Core\\Installer\\Project::import"
+        ],
+        "import-controls": [
+            "Frontender\\Core\\Installer\\Importer\\Controls::CLIImport"
         ]
     }
 }
