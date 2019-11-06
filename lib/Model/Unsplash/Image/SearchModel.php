@@ -12,9 +12,7 @@ class SearchModel extends AbstractModel
     public function __construct(Container $container)
     {
         parent::__construct($container);
-
-        $this->doTestCalls();
-
+        
         $this->getState()
             ->insert('q', 'cats', false)
             ->insert('orientation')
