@@ -13,7 +13,7 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('article') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} id="article" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('article') }} {{ helper.class_attribute(config, ['']|join('  |  ')|trim)|raw }} id="article" {{ helper.frontender_id_attribute(frontender, 'frontender')|raw }}>
     {% if content.title|t %}
         <h2>{{ content.title|t }}</h2>
     {% endif %}

@@ -34,7 +34,18 @@
     {{ helper.class_string(config) }}
 {% endmacro %}
 
+{# Build id value #}
+{% macro id_value(config, fallback) %}{{ config.container_id|default( fallback ) }}{% endmacro %}
+
+{# Build id attribute #}
+{% macro id_attribute(config, fallback) %}
+    {% import _self as helper %}
+    {% if helper.id_value(config) %}
+        id="{{ helper.id_value(config) }}"
+    {% endif %}
+{% endmacro %}
+
 {# Build container id attribute #}
-{% macro container_id_attribute(value, namespace) %}
-    {% if value %} data-{{namespace}}="{{ value|raw }}"{% endif %}
+{% macro frontender_id_attribute(id, namespace) %}
+    {% if id %} data-{{namespace}}="{{ id }}"{% endif %}
 {% endmacro %}

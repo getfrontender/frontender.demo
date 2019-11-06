@@ -18,13 +18,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
         {% block title %} {% endblock %}
         {% block meta %} {% endblock %}
         {% block stylesheets %} {% endblock %}
         {{ renderAssets('styles')|raw }}
         {% block scripts %} {% endblock %}
     </head>
-    <body{{ helper.class_attribute(page_config, [page_config.cupcake, (page_config.subpage == true ? "subpage" : "")]|join('  |  ')|trim)|raw }}{{ helper.container_id_attribute(frontender, "frontender")|raw }}>
+    <body{{ helper.class_attribute(page_config, [page_config.cupcake, (page_config.subpage == true ? "subpage" : "")]|join('  |  ')|trim)|raw }}{{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
         {% for container in containers %}
             {% include container.template with container %}
         {% endfor %}

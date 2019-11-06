@@ -12,6 +12,7 @@
 #}
 
 {% import "macros/template.html.twig" as helper %}
+{% import "macros/unsplash.html.twig" as unsplash %}
 
 {#
     Description:
@@ -24,35 +25,33 @@
     Allow placement: none
 #}
 
-<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['row']|join('  |  ')|trim)|raw }}{{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
-    {% if content.image_alignment|default("right") == "left" %}
+<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['row']|join('  |  ')|trim)|raw }}{{ helper.frontender_id_attribute(frontender, 'frontender')|raw }}>
+    {% if config.image_alignment|default("right") == "left" %}
     <div class="6u 12u$(medium)">
-        {% if model.urls.regular %}
-        <span class="image fit">
-            <img src="{{ model.urls.raw }}&fit=crop?crop=faces&w=750&q=80" alt="{{ model.description }}">
+        {% if model.urls %}
+        <span class="image fit" style="position:relative;">
+            <img src="{{ unsplash.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
+            {% include "demo/partials/unsplash-credit.html.twig" %}
         </span>
         {% endif %}
     </div>
     {% endif %}
     <div class="6u 12u$(medium)">
-        {% if content.title|t %}
-        <h2>{{ content.title|t }}</h2>
-        {% endif %}
         {% if content.body|t %}
-        {{ content.body|t|markdown|raw }}
+            {{ content.body|t|markdown|raw }}
         {% endif %}
-        {% if content.button.page|t %}
-        <footer>
-            <a href="{{ content.button.page|t }}"
-                class="button alt">{{ content.button.label|default({"en-GB": "Read more"})|t }}</a>
-        </footer>
+        {% if link.page|t %}
+            <footer>
+                <a href="{{ link.page|t }}" class="button alt">{{ link.label|default({"en-GB": "Read more"})|t }}</a>
+            </footer>
         {% endif %}
     </div>
-    {% if content.image_alignment|default("right") == "right" %}
+    {% if config.image_alignment|default("right") == "right" %}
     <div class="6u 12u$(medium)">
-        {% if model.urls.regular %}
-        <span class="image fit">
-            <img src="{{ model.urls.raw }}&fit=crop?crop=faces&w=750&q=80" alt="{{ model.description }}">
+        {% if model.urls %}
+        <span class="image fit" style="position:relative;">
+            <img src="{{ unsplash.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
+            {% include "demo/partials/unsplash-credit.html.twig" %}
         </span>
         {% endif %}
     </div>

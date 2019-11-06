@@ -14,22 +14,40 @@
 {% import "macros/template.html.twig" as helper %}
 {% import "macros/unsplash.html.twig" as unsplash %}
 
+{% set columns_map = {
+    "1": "",
+    "2": "6u 12u$(small)",
+    "3": "4u 12u$(medium)",
+    "4": "3u 12u$(medium)"
+} %}
 
-<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, []|join('  |  ')|trim)|raw }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, []|join('  |  ')|trim)|raw }} {{ helper.frontender_id_attribute(frontender, 'frontender')|raw }}>
 
     {% if content.title|t %}
         <h2>{{ content.title|t }}</h2>
     {% endif %}
-    <div class="row 50% uniform">
+    {# <div class="row 50% uniform">
         {% for item in model %}
             <div class="4u 12u$(small) 6u(medium)">
-                <span class="image fit"><img src="{{ unsplash.crop(item, {w: 640, h: 480}) }}" alt="{{ item.description }}"></span>
-                {% if item.description %}
-                    <em>{{ item.description }}</em>
-                {% endif %}
-                <p>By: {{ item.user.name }}</p>
+                <span class="image fit" style="position:relative;">
+                    <img src="{{ unsplash.crop(item, {w: 640, h: 480}) }}" alt="{{ item.alt_description }}">
+                    {% include "demo/partials/unsplash-credit.html.twig" with {model: item} %}
+                </span>
             </div>
         {% endfor %}
+    </div> #}
+    <div class="row 50% uniform">
+        {% for item in model %}
+        <div class="{{ columns_map|slice(config.columns|default(3) - 1)|first }}">
+            <span class="image fit" style="position:relative;">
+                <img src="{{ unsplash.crop(item, {w: 640, h: 480}) }}" alt="{{ item.alt_description }}">
+                {% include "demo/partials/unsplash-credit.html.twig" with {model: item} %}
+            </span>
+        </div>
+        {% if loop. index is divisible by( config.columns|default(3) ) %}
+            </div>
+            <div class="row 50% uniform">
+        {% endif %}
+    {% endfor %}
     </div>
-
 </{{ config.container_tag|default('div') }}>

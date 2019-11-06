@@ -12,9 +12,12 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['masthead', (page_config.subpage == true ? "alt" : "")]|join('  |  ')|trim)|raw }} id="header" {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
+<{{ config.container_tag|default("div") }}
+    {{ helper.class_attribute(config, ['masthead', (page_config.subpage == true ? "alt" : "")]|join('  |  ')|trim)|raw }}
+    {{ helper.id_attribute(config|merge({container_id: "header"}))|raw }} 
+    {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
     
-    {% if config.show_header|default(true) %}
+    {% if config.show_header|default("1") %}
         <div class="logo">
             <a href="{{ route() }}">{{ "Frontender"|i18n }} <span>{{ "Demo Website"|i18n }}</span></a>
         </div>

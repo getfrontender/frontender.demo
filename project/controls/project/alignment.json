@@ -6,6 +6,12 @@
     "control": "core/list",
     "options": [
         {
+            "value": "",
+            "label": {
+                "en-GB": "Inherit"
+            }
+        },
+        {
             "value": "align-left",
             "label": {
                 "en-GB": "Align left"

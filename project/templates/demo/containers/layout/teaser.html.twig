@@ -15,19 +15,19 @@
 
 <{{ config.container_tag|default("div") }}
  {{ helper.class_attribute(config, []|join(" ")|trim)|raw }}
- {{ helper.container_id_attribute(frontender, "frontender")|raw }}>
-    <{% if content.title|t and content.catch_phrase|t %}
+ {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
+    {% if content.title|t and content.catchphrase|t %}
         <header>
             <h1>{{ content.title|t }}</h1>
-            <p>{{ content.catch_phrase|t }}</p>
+            <p>{{ content.catchphrase|t }}</p>
         </header>
     {% else %}
     <div class="header">
         {% if content.title|t %}
             <h1>{{ content.title|t }}</h1>
         {% endif %}
-        {% if content.catch_phrase|t %}
-            <p>{{ content.catch_phrase|t }}</p>
+        {% if content.catchphrase|t %}
+            <p>{{ content.catchphrase|t }}</p>
         {% endif %}
     </div>
     {% endif %}
@@ -36,9 +36,9 @@
             {{ content.body|t|markdown|raw }}
         </div>
     {% endif %}
-    {% if content.button.page|t %}
+    {% if link.page|t %}
         <footer>
-            <a href="{{ content.button.page|t }}" class="button alt">{{ content.button.label|default({"en-GB": "Read more"})|t }}</a>
+            <a href="{{ link.page|t }}" class="button alt">{{ link.label|default({"en-GB": "Read more"})|t }}</a>
         </footer>
     {% endif %}
 </{{ config.container_tag|default("div") }}>
