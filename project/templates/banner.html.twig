@@ -21,11 +21,11 @@
 
 <{{ config.container_tag|default("div") }}
     {{ helper.class_attribute(config, ["banner", config.overlay, config.alignment ]|join(" ")|trim)|raw }}
-    {{ helper.container_id_attribute(frontender, "frontender")|raw }}
-    {% if content.show_bg|default(1) and model.urls.raw %}data-bg="{{ unsplash.crop(model, {w: 1480, h: 0}) }}"
-    {% endif %}>
+    {{ helper.id_attribute(config)|raw }}
+    {% if content.show_bg|default(1) and model.urls.raw %}data-bg="{{ unsplash.crop(model, {w: 1480, h: 0}) }}"{% endif %}
+    {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
     <div class="{{ ["inner", config.width]|join(" ") }}">
-        <h1>{{ content.title|default( {"en-GB": "A taste of Frontender"})|t }}</h1>
+        <h1>{{ content.headline|default( {"en-GB": "A taste of Frontender"})|t }}</h1>
         {% if content.show_tagline|default(true) %}
         <p class="attribution">
             <img class="attribution__brand" src="/assets/images/brand/f-dot-framed-theme.png"
@@ -35,4 +35,5 @@
         </p>
         {% endif %}
     </div>
+    {% include "demo/partials/unsplash-credit.html.twig" %}
 </{{ config.container_tag|default("div") }}>

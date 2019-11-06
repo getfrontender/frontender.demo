@@ -35,14 +35,16 @@
 
 #}
 <{{ config.container_tag|default("div") }}
-    {{ helper.class_attribute(config, ["wrapper","post", config.overlay, config.alignment ]|join(" ")|trim)|raw }}
-    {{ helper.container_id_attribute(frontender, "frontender")|raw }}
-    {% if content.show_bg|default(1) and model.urls.raw %}data-bg="{{ unsplash.crop(model, {w: 1480, h: 0}) }}"{% endif %}>
-    <div class="{{ ["inner", config.width]|join(" ") }}">
+    {{ helper.class_attribute(config, ["wrapper","post", config.overlay ]|join(" ")|trim)|raw }}
+    {{ helper.id_attribute(config)|raw }}
+    {% if content.show_bg|default(1) and model.urls.raw %}data-bg="{{ unsplash.crop(model, {w: 1480, h: 0}) }}"{% endif %}
+    {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
+    <div class="{{ ["inner", config.width, config.alignment]|join(" ") }}">
         <div class="box">
             {% for container in containers %}
                 {% include container.template with container %}
             {% endfor %}
         </div>
     </div>
+    {% include "demo/partials/unsplash-credit.html.twig" %}
 </{{ config.container_tag|default("div") }}>

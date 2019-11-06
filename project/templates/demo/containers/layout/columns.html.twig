@@ -31,7 +31,7 @@
     "4": "3u 12u$(medium)"
 } %}
 
-<{{ config.container_tag|default("div") }} {{ helper.class_attribute(config, [""]|join(" ")|trim)|raw }}{{ helper.container_id_attribute(frontender, "frontender")|raw }}>
+<{{ config.container_tag|default("div") }} {{ helper.class_attribute(config, [""]|join(" ")|trim)|raw }}{{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
     <div class="row">
         {% for entry in content.body %}
             <div class="{{ columns_map|slice(config.columns|default(3) - 1)|first }}">

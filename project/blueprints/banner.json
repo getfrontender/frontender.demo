@@ -1,16 +1,17 @@
 {
-    "frontender": "288a93622e0c099696f0daa34eff325g",
+    "frontender": "1572871029",
     "template": "demo/containers/banner.html.twig",
+    "placement": ["full-width"],
     "name": {
         "en-GB": "Banner"
     },
     "description": {
-        "en-GB": "Full width container for texts. Contains a nested container for bodies of texts."
+        "en-GB": "Large backdrop image with a headline and a tagline. The backdrop image is configurable and provided by an adapter that connects with the remote API of Unsplash."
     },
     "template_config": {
         "model": {
             "label": {
-                "en-GB": "Content"
+                "en-GB": "Image"
             },
             "controls": {
                 "data": {
@@ -18,7 +19,7 @@
                         "adapter": "Unsplash",
                         "model": "Image\\Search",
                         "id": {
-                            "en-GB": "4ixHdlcROPI"
+                            "en-GB": "R26-yUBSgC0"
                         }
                     },
                     "label": {
@@ -38,6 +39,31 @@
                             ]
                         }
                     ]
+                }
+            }
+        },
+        "content": {
+            "label": {
+                "en-GB": "Content"
+            },
+            "controls": {
+                "headline": {
+                    "value": {
+                        "en-GB": "The cat’s meow"
+                    },
+                    "label": {
+                        "en-GB": "Headline"
+                    },
+                    "control": "core/text"
+                },
+                "tagline": {
+                    "value": {
+                        "en-GB": "A website made with Frontender"
+                    },
+                    "label": {
+                        "en-GB": "Tagline"
+                    },
+                    "control": "core/text"
                 }
             }
         },
@@ -62,67 +88,25 @@
                     "control": "core/list",
                     "options": [
                         {
-                            "value": "banner--transparent",
-                            "label": {
-                                "en-GB": "Hide"
-                            }
-                        },
-                        {
                             "value": "",
                             "label": {
                                 "en-GB": "Show"
                             }
+                        },
+                        {
+                            "value": "post--transparent",
+                            "label": {
+                                "en-GB": "Hide"
+                            }
                         }
                     ]
+                },
+                "show_tagline": {
+                    "value": "1",
+                    "control": "core/hidden"
                 }
             }
         }
     },
-    "containers": [
-        {
-            "frontender": "0688d6a242bbe0f731e598e7c51d0318",
-            "template": "demo/containers/layout/banner.html.twig",
-            "name": {
-                "en-GB": "Banner"
-            },
-            "description": {
-                "en-GB": "A hero container with a full screen background image and a headline."
-            },
-            "template_config": {
-                "content": {
-                    "label": {
-                        "en-GB": "Content"
-                    },
-                    "controls": {
-                        "title": {
-                            "value": {
-                                "en-GB": "A taste of Frontender"
-                            },
-                            "label": {
-                                "en-GB": "Headline"
-                            },
-                            "control": "core/text"
-                        }
-                    }
-                },
-                "config": {
-                    "label": {
-                        "en-GB": "Settings"
-                    },
-                    "controls": {
-                        "container_tag": {
-                            "value": "section",
-                            "control": "project/container_tag"
-                        },
-                        "container_class": {
-                            "value": "",
-                            "control": "project/container_class"
-                        }
-                    }
-                }
-            },
-            "containers": []
-        }
-    ],
-    "blueprint": "5ce7eb30f7269c8d544f2add"
+    "containers": []
 }

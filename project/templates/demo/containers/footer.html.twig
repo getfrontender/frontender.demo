@@ -4,7 +4,7 @@
      * Defaults
      * @package     Frontender Platform
      * @subpackage  Road-trip Project
-     * @author      Jeroen Leijten
+     * @author      Babs Gösgens
      * @license     MIT License
      * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
      * @link        http://getfrontender.com
@@ -13,48 +13,34 @@
 
 {% import "macros/template.html.twig" as helper %}
 
-<{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['footer', config.theme]|join('  |  ')|trim)|raw }} {{ helper.container_id_attribute(frontender, 'frontender')|raw }}>
-    <div class="inner">
-        <h2>{{ content.title|t }}</h2>
+{#
+    Description:
 
-        <form action="#" method="post">
-            <div class="field half first">
-                <label for="name">Name</label>
-                <input name="name" id="name" type="text" placeholder="Name">
-            </div>
-            <div class="field half">
-                <label for="email">Email</label>
-                <input name="email" id="email" type="email" placeholder="Email">
-            </div>
-            <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-            </div>
-            <ul class="actions">
-                <li><input value="Send Message" class="button alt" type="submit"></li>
-            </ul>
-        </form>
+    Full width container for texts. Contains a nested container for bodies of texts.
 
-        <ul class="icons">
-            {% for icon in content.icons %}
-                <li>
-                    <a href="{{ icon.page|t }}" target="_blank" class="icon {{ icon.icon_size }} {{ icon.icon }}">
-                        {% if icon.label|t %}
-                            <span class="label">{{ icon.label|t }}</span>
-                        {% endif %}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
+    Variations:
 
-        <div class="copyright">
-            <div class="footer__accreditation accreditation">
-                <p class="accreditation__copyright"><small>Images supplied by <a href="https://unsplash.com" target="_blank" rel="nofollow">Unsplash</a>. Template by <a href="https://templated.co" target="_blank" rel="nofollow">TEMPLATED</a></small></p><!--
-                --><p class="accreditation__attribution attribution">
-                    <img class="attribution__brand" src="/assets/images/brand/f-dot-framed-theme.png" alt="Framed Frontender logo">
-                    <a class="attribution__payoff" href="https://getfrontender.com" rel="follow">{{ "Made with Frontender"|i18n }}</a>
-                </p>
-            </div>
-        </div>
+    With background image
+    Without background image
+
+    Template configurations:
+    
+    post: true|false (only for background image variant)
+    width: "inner"|"container"
+    style: none|style1|style2
+
+    Placement: fullwidth
+    Allow placement: box
+
+#}
+<{{ config.container_tag|default("div") }}
+    {{ helper.class_attribute(config, ["wrapper","footer","post post--transparent", config.alignment , config.theme ]|join(" ")|trim)|raw }}
+    {{ helper.id_attribute(config, frontender)|raw }}
+    {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
+    <div class="{{ ["inner", config.width, config.alignment]|join(" ") }}">
+        {% for container in containers %}
+            {% include container.template with container %}
+        {% endfor %}
+        {% include "demo/containers/footer/footer-attribution.html.twig" %}
     </div>
-</{{ config.container_tag|default('div') }}>
+</{{ config.container_tag|default("div") }}>

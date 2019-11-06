@@ -1,0 +1,132 @@
+{
+    "frontender": "1572873794",
+    "placement": ["full-width"],
+    "allow_placement": ["box"],
+    "template": "demo/containers/cover-section.html.twig",
+    "name": {
+        "en-GB": "Cover Section"
+    },
+    "description": {
+        "en-GB": "Full-width container for bodies of texts. Contains a large backdrop image. The backdrop image is configurable and provided by an adapter that connects with the remote API of Unsnplash. Equip with one or more layout containers."
+    },
+    "template_config": {
+        "model": {
+            "label": {
+                "en-GB": "Content"
+            },
+            "controls": {
+                "data": {
+                    "value": {
+                        "adapter": "Unsplash",
+                        "model": "Image\\Search",
+                        "id": {
+                            "en-GB": "KfPwby-UisA"
+                        }
+                    },
+                    "label": {
+                        "en-GB": "Banner image"
+                    },
+                    "control": "core/abstract",
+                    "type": "lookup",
+                    "adapters": [
+                        {
+                            "value": "Unsplash",
+                            "label": "Unsplash",
+                            "models": [
+                                {
+                                    "value": "Image\\Search",
+                                    "label": "Image"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "config": {
+            "label": {
+                "en-GB": "Settings"
+            },
+            "controls": {
+                "container_tag": {
+                    "value": "div",
+                    "control": "project/container_tag"
+                },
+                "container_class": {
+                    "value": "",
+                    "control": "project/container_class"
+                },
+                "overlay": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Show overlay"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Show"
+                            }
+                        },
+                        {
+                            "value": "post--transparent",
+                            "label": {
+                                "en-GB": "Hide"
+                            }
+                        }
+                    ]
+                },
+                "alignment": {
+                    "value": "align-left",
+                    "label": {
+                        "en-GB": "Text alignment"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "align-left",
+                            "label": {
+                                "en-GB": "Align left"
+                            }
+                        },
+                        {
+                            "value": "align-center",
+                            "label": {
+                                "en-GB": "Align center"
+                            }
+                        },
+                        {
+                            "value": "align-right",
+                            "label": {
+                                "en-GB": "Align right"
+                            }
+                        }
+                    ]
+                },
+                "width": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Content width"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Narrower"
+                            }
+                        },
+                        {
+                            "value": "container",
+                            "label": {
+                                "en-GB": "Wider"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "containers": []
+}

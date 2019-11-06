@@ -34,8 +34,9 @@
 
 #}
 <{{ config.container_tag|default("div") }}
-    {{ helper.class_attribute(config, ["wrapper","post post--transparent", config.theme ]|join(" ")|trim)|raw }}
-    {{ helper.container_id_attribute(frontender, "frontender")|raw }}>
+    {{ helper.class_attribute(config, ["wrapper","post post--transparent", config.alignment , config.theme ]|join(" ")|trim)|raw }}
+    {{ helper.id_attribute(config)|raw }}
+    {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
     <div class="{{ ["inner", config.width, config.alignment]|join(" ") }}">
         <div class="box box--transparent">
             {% for container in containers %}

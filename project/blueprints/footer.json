@@ -1,0 +1,411 @@
+{
+    "frontender": "1572951986",
+    "placement": [
+        "full-width"
+    ],
+    "allow_placement": [
+        "box"
+    ],
+    "template": "demo/containers/footer.html.twig",
+    "name": {
+        "en-GB": "Footer"
+    },
+    "description": {
+        "en-GB": "A site footer container with a contact form and copyright notice. May contain other layout containers."
+    },
+    "template_config": {
+        "config": {
+            "label": {
+                "en-GB": "Settings"
+            },
+            "controls": {
+                "container_tag": {
+                    "value": "div",
+                    "control": "project/container_tag"
+                },
+                "container_class": {
+                    "value": "",
+                    "control": "project/container_class"
+                },
+                "theme": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Background colour"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Default (dark grey)"
+                            }
+                        },
+                        {
+                            "value": "style1",
+                            "label": {
+                                "en-GB": "Theme (coral)"
+                            }
+                        },
+                        {
+                            "value": "style2",
+                            "label": {
+                                "en-GB": "Neutral (grey)"
+                            }
+                        }
+                    ]
+                },
+                "alignment": {
+                    "value": "align-center",
+                    "label": {
+                        "en-GB": "Text alignment"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "align-left",
+                            "label": {
+                                "en-GB": "Align left"
+                            }
+                        },
+                        {
+                            "value": "align-center",
+                            "label": {
+                                "en-GB": "Align center"
+                            }
+                        },
+                        {
+                            "value": "align-right",
+                            "label": {
+                                "en-GB": "Align right"
+                            }
+                        }
+                    ]
+                },
+                "width": {
+                    "value": "",
+                    "label": {
+                        "en-GB": "Content width"
+                    },
+                    "control": "core/list",
+                    "options": [
+                        {
+                            "value": "",
+                            "label": {
+                                "en-GB": "Narrower"
+                            }
+                        },
+                        {
+                            "value": "container",
+                            "label": {
+                                "en-GB": "Wider"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "containers": [
+        {
+            "frontender": "1572957031",
+            "placement": [
+                "box"
+            ],
+            "template": "demo/containers/layout/contact-form.html.twig",
+            "name": {
+                "en-GB": "Contact form"
+            },
+            "description": {
+                "en-GB": "An example of a form container. Can be placed inside Section and Cover section containers."
+            },
+            "template_config": {
+                "content": {
+                    "label": {
+                        "en-GB": "Content"
+                    },
+                    "controls": {
+                        "title": {
+                            "value": {
+                                "en-GB": "Contact us"
+                            },
+                            "label": {
+                                "en-GB": "Title"
+                            },
+                            "control": "core/text"
+                        }
+                    }
+                },
+                "labels": {
+                    "label": {
+                        "en-GB": "Labels"
+                    },
+                    "controls": {
+                        "name": {
+                            "value": {
+                                "en-GB": "Name"
+                            },
+                            "label": {
+                                "en-GB": "Name field"
+                            },
+                            "control": "core/text"
+                        },
+                        "email": {
+                            "value": {
+                                "en-GB": "Email"
+                            },
+                            "label": {
+                                "en-GB": "Email field"
+                            },
+                            "control": "core/text"
+                        },
+                        "category": {
+                            "value": {
+                                "en-GB": "Category"
+                            },
+                            "label": {
+                                "en-GB": "Category field"
+                            },
+                            "control": "core/text"
+                        },
+                        "message": {
+                            "value": {
+                                "en-GB": "Message"
+                            },
+                            "label": {
+                                "en-GB": "Message field"
+                            },
+                            "control": "core/text"
+                        },
+                        "submit": {
+                            "value": {
+                                "en-GB": "Send message"
+                            },
+                            "label": {
+                                "en-GB": "Submit button"
+                            },
+                            "control": "core/text"
+                        },
+                        "reset": {
+                            "value": {
+                                "en-GB": "Reset"
+                            },
+                            "label": {
+                                "en-GB": "Reset button"
+                            },
+                            "control": "core/text"
+                        }
+                    }
+                },
+                "config": {
+                    "label": {
+                        "en-GB": "Settings"
+                    },
+                    "controls": {
+                        "container_tag": {
+                            "value": "div",
+                            "control": "project/container_tag"
+                        },
+                        "container_class": {
+                            "value": "",
+                            "control": "project/container_class"
+                        },
+                        "alignment": {
+                            "value": "align-center",
+                            "label": {
+                                "en-GB": "Text alignment"
+                            },
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": "align-left",
+                                    "label": {
+                                        "en-GB": "Align left"
+                                    }
+                                },
+                                {
+                                    "value": "align-center",
+                                    "label": {
+                                        "en-GB": "Align center"
+                                    }
+                                },
+                                {
+                                    "value": "align-right",
+                                    "label": {
+                                        "en-GB": "Align right"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "containers": []
+        },
+        {
+            "frontender": "1572957047",
+            "placement": [
+                "box"
+            ],
+            "template": "demo/containers/layout/social-links.html.twig",
+            "name": {
+                "en-GB": "Social Links"
+            },
+            "description": {
+                "en-GB": "A list of links to social media. Can be placed in a Box container."
+            },
+            "template_config": {
+                "content": {
+                    "label": {
+                        "en-GB": "Content"
+                    },
+                    "controls": {
+                        "links": {
+                            "value": [
+                                {
+                                    "icon": {
+                                        "en-GB": "twitter"
+                                    },
+                                    "page": {
+                                        "domain": "twitter.com/getfrontender"
+                                    },
+                                    "label": []
+                                },
+                                {
+                                    "icon": {
+                                        "en-GB": "github"
+                                    },
+                                    "page": {
+                                        "domain": "github.com/getfrontender"
+                                    },
+                                    "label": []
+                                }
+                            ],
+                            "label": {
+                                "en-GB": "Icon buttons"
+                            },
+                            "type": "compound",
+                            "repeatable": true,
+                            "controls": {
+                                "icon": {
+                                    "value": "",
+                                    "label": {
+                                        "en-GB": "Icon"
+                                    },
+                                    "options": [
+                                        {
+                                            "value": "facebook",
+                                            "label": {
+                                                "en-GB": "Facebook"
+                                            }
+                                        },
+                                        {
+                                            "value": "twitter",
+                                            "label": {
+                                                "en-GB": "Twitter"
+                                            }
+                                        },
+                                        {
+                                            "value": "instagram",
+                                            "label": {
+                                                "en-GB": "Instagram"
+                                            }
+                                        },
+                                        {
+                                            "value": "github",
+                                            "label": {
+                                                "en-GB": "Github"
+                                            }
+                                        },
+                                        {
+                                            "value": "linkedin",
+                                            "label": {
+                                                "en-GB": "LinkedIn"
+                                            }
+                                        }
+                                    ],
+                                    "control": "core/list"
+                                },
+                                "page": {
+                                    "label": {
+                                        "en-GB": "URL"
+                                    },
+                                    "control": "core/domain"
+                                },
+                                "label": {
+                                    "label": {
+                                        "en-GB": "Label"
+                                    },
+                                    "control": "core/text"
+                                }
+                            }
+                        }
+                    }
+                },
+                "config": {
+                    "label": {
+                        "en-GB": "Settings"
+                    },
+                    "controls": {
+                        "container_tag": {
+                            "value": "div",
+                            "control": "project/container_tag"
+                        },
+                        "container_class": {
+                            "value": "",
+                            "control": "project/container_class"
+                        },
+                        "alignment": {
+                            "value": "align-left",
+                            "label": {
+                                "en-GB": "Text alignment"
+                            },
+                            "control": "core/list",
+                            "options": [
+                                {
+                                    "value": "align-left",
+                                    "label": {
+                                        "en-GB": "Align left"
+                                    }
+                                },
+                                {
+                                    "value": "align-center",
+                                    "label": {
+                                        "en-GB": "Align center"
+                                    }
+                                },
+                                {
+                                    "value": "align-right",
+                                    "label": {
+                                        "en-GB": "Align right"
+                                    }
+                                }
+                            ]
+                        },
+                        "style": {
+                            "value": "icon round",
+                            "control": "core/list",
+                            "label": {
+                                "en-GB": "Style"
+                            },
+                            "options": [
+                                {
+                                    "value": "icon",
+                                    "label": {
+                                        "en-GB": "Icon"
+                                    }
+                                },
+                                {
+                                    "value": "icon round",
+                                    "label": {
+                                        "en-GB": "Icon with background"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "containers": []
+        }
+    ]
+}

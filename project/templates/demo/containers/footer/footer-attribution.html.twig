@@ -1,0 +1,27 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+<{{ config.container_tag|default("div") }}
+    {{ helper.class_attribute(config, ["copyright", config.alignment , config.theme ]|join(" ")|trim)|raw }}
+    {{ helper.id_attribute(config)|raw }}
+    {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
+    <div class="footer__accreditation accreditation">
+        <div class="accreditation__copyright"><small>Images supplied by <a href="https://unsplash.com" target="_blank" rel="nofollow">Unsplash</a>. Template by <a href="https://templated.co" target="_blank" rel="nofollow">TEMPLATED</a></small></div><!--
+        --><p class="accreditation__attribution attribution">
+            <img class="attribution__brand" src="/assets/images/brand/f-dot-framed-theme.png" alt="Framed Frontender logo">
+            <a class="attribution__payoff" href="https://getfrontender.com" rel="follow">{{ "This website is with Frontender"|i18n }}</a>
+        </p>
+    </div>
+</{{ config.container_tag|default("div") }}>

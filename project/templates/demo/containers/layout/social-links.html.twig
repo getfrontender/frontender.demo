@@ -1,0 +1,35 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+<{{ config.container_tag|default("div") }}
+    {{ helper.class_attribute(config, ["", config.alignment , config.theme ]|join(" ")|trim)|raw }}
+    {{ helper.id_attribute(config)|raw }}
+    {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
+    {% if content.links|length %}
+    <ul class="icons">
+        {% for link in content.links %}
+            {% if link.page.domain|t %}
+            <li>
+                <a href="{{ link.page.protocol|t|default("//") }}{{ link.page.domain|t }}" title="{{ link.label|t }}" target="_blank" class="{{ config.style }} {{ "fa-" ~ link.icon|t }}">
+                    {% if link.label|t %}
+                        <span class="label">{{ link.label|t|default(link.icon|i18n) }}</span>
+                    {% endif %}
+                </a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</{{ config.container_tag|default("div") }}>
