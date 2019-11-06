@@ -28,19 +28,20 @@
 
     <nav id="menu">
         <ul class="links">
-            <li><a href="{{ route({'page': '/' }) }}">Home</a></li>
+            <li><a href="{{ route({'page': '' }) }}"  rel="follow">{{ "Home"|i18n }}</a></li>
             <li><a href="{{ route({'page': '/how-frontender-works' }) }}"  rel="follow">How it works</a></li>
-            <li><a href="{{ route({'page': '/documentation' }) }}" rel="follow">Documentation</a></li>
-
-            <!-- @TODO replace with correct my.getfrontender link -->
-            <li><a href="https://brickson.nl" target="_blank" rel="follow">Login</a></li>
-
-            <!-- @TODO replace with correct download link -->
-            <li><a href="https://brickson.nl" target="_blank" rel="follow">Download</a></li>
 
             {% for link in content.links %}
-            <li><a href="{{ route({'page': link.page }) }}" rel="nofollow">{{ link.label|t }}</a></li>
+                <li><a href="{{ route({'page': link.page }) }}" rel="nofollow">{{ link.label|t }}</a></li>
             {% endfor %}
+
+            <li><a href="{{ route({'page': '/frontender-demosite-scopes' }) }}" rel="nofollow">Scopes</a></li>
+            <li><a href="{{ route({'page': '/frontender-demosite-container-overview' }) }}" rel="nofollow">Container overview</a></li>
+            <li><a href="{{ route({'page': '/frontender-container-recepees' }) }}" rel="follow">Container cookbook</a></li>
         </ul>
+
+        <footer class="leader--double">
+            <a href="/download-frontender-desktop" class="button">Download Frontender</a>
+        </footer>
     </nav>
 </{{ config.container_tag|default('div') }}>
