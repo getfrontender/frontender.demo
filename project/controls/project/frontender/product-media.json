@@ -1,0 +1,100 @@
+{
+    "label": {
+        "en-GB": "Content"
+    },
+    "controls": {
+        "url": {
+            "value": "https://getfrontender.com/assets/video/screencasts/F-InsertComponent.mp4",
+            "label": {
+                "en-GB": "Image"
+            },
+            "control": "core/list",
+            "options": [
+                {
+                    "label": {
+                        "en-GB": "F-LookupUnsplash (image)"
+                    },
+                    "value": "https://getfrontender.com/assets/images/product-shots/F-LookupUnsplash.png"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-PagesList (image)"
+                    },
+                    "value": "https://getfrontender.com/assets/images/product-shots/F-PagesList.png"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-ProjectSettings (image)"
+                    },
+                    "value": "https://getfrontender.com/assets/images/product-shots/F-ProjectSettings.png"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-CodeView (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-CodeView.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-CodeViewTheme (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-CodeViewTheme.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-ContainerMenu (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-ContainerMenu.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-ContainerMenuTheme (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-ContainerMenuTheme.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-ContainerSettingsTheme (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-ContainerSettingsTheme.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-InsertComponent (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-InsertComponent.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-PageListScopeSwitch (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-PageListScopeSwitch.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-PreviewPublish (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-PreviewPublish.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-ProjectSettingsConfigureScop (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-ProjectSettingsConfigureScope.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-ProjectSettingsCreateCampaign (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-ProjectSettingsCreateCampaign.mp4"
+                },
+                {
+                    "label": {
+                        "en-GB": "F-PublishPage (video)"
+                    },
+                    "value": "https://getfrontender.com/assets/video/screencasts/F-PublishPage.mp4"
+                }
+            ]
+        }
+    }
+}
