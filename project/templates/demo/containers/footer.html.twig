@@ -34,10 +34,10 @@
 
 #}
 <{{ config.container_tag|default("div") }}
-    {{ helper.class_attribute(config, ["wrapper","footer","post post--transparent", config.alignment , config.theme ]|join(" ")|trim)|raw }}
+    {{ helper.class_attribute(config, ["wrapper","footer","ppost ppost--transparent", config.alignment , config.theme ]|join(" ")|trim)|raw }}
     {{ helper.id_attribute(config, frontender)|raw }}
     {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
-    <div class="{{ ["inner", config.width, config.alignment]|join(" ") }}">
+    <div class="{{ ["inner", config.width, config.box|default('box box--transparent'), config.alignment]|join(" ") }}">
         {% for container in containers %}
             {% include container.template with container %}
         {% endfor %}
