@@ -1,0 +1,61 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+{#
+    Description:
+    Container for a single body of text with a configurable image.
+
+    Template configurations:
+    Alignment: left|right
+
+    Placement: box
+    Allow placement: none
+#}
+
+<{{ config.container_tag|default('div') }}
+    {{ helper.class_attribute(config, ['row']|join('  |  ')|trim)|raw }}{{ helper.frontender_id_attribute(frontender, 'frontender')|raw }}>
+    {% if config.image_alignment|default("right") == "left" %}
+    <div class="6u 12u$(medium)">
+        {% if media.url %}
+            {% if media.url|t|split('.')|last in ['png', 'gif', 'jpg', 'jpeg', 'svg', 'webp'] %}
+                <img class="image fit" src="{{ media.url|t }}" alt="{{"An illustrative screenshot image of Frontender"|i18n}}" />
+            {% elseif media.url|t|split('.')|last == 'mp4' %}
+                <video class="image fit" src="{{ media.url|t }}" controls playsinline poster="{{ v|replace({'.mp4': '.png'}) }}"></video>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% endif %}
+    <div class="6u 12u$(medium)">
+        {% if content.body|t %}
+        {{ content.body|t|markdown|raw }}
+        {% endif %}
+        {% if link.page|t %}
+        <footer>
+            <a href="{{ link.page|t }}" class="button alt">{{ link.label|default({"en-GB": "Read more"})|t }}</a>
+        </footer>
+        {% endif %}
+    </div>
+    {% if config.image_alignment|default("right") == "right" %}
+    <div class="6u 12u$(medium)">
+        {% if media.url %}
+            {% if media.url|t|split('.')|last in ['png', 'gif', 'jpg', 'jpeg', 'svg', 'webp'] %}
+            <img class="image fit" src="{{ media.url|t }}" alt="{{"An illustrative screenshot image of Frontender"|i18n}}" />
+            {% elseif media.url|t|split('.')|last == 'mp4' %}
+            <video class="image fit" src="{{ media.url|t }}" controls playsinline poster="{{ v|replace({'.mp4': '.png'}) }}"></video>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% endif %}
+</{{ config.container_tag|default('div') }}>
