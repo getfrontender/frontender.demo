@@ -25,6 +25,9 @@
     "scripts": {
         "install-project": [
             "Frontender\\Core\\Installer\\Project::import"
+        ],
+        "import-controls": [
+            "Frontender\\Core\\Installer\\Importer\\Controls::importViaComposer"
         ]
     }
 }
