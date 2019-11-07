@@ -1699,12 +1699,16 @@
 			text-decoration: none;
 		}
 
-	h2 {
+	h1 {
 		font-size: 1.75em;
+    }
+    
+    h2 {
+		font-size: 1.5em;
 	}
 
 	h3 {
-		font-size: 1.35em;
+		font-size: 1.25em;
 	}
 
 	h4 {
@@ -2755,14 +2759,14 @@
     }
 
     h3 + p {
-		font-size: 1.1em;
+		/* font-size: 1.1em; */
 		/* margin-top: -0.8em; */
 	}
 
     h4 + p,
 	h5 + p,
 	h6 + p {
-		font-size: 0.9em;
+		/* font-size: 0.9em; */
 		/* margin-top: -0.6em; */
 	}
 
@@ -4499,3 +4503,6 @@
         color: inherit;
     }
     
+.content {
+    /* font-size: 1.1em; */
+}
