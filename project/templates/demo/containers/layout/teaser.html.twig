@@ -17,14 +17,14 @@
  {{ helper.class_attribute(config, []|join(" ")|trim)|raw }}
  {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
     {% if content.title|t and content.catchphrase|t %}
-        <header>
-            <h1>{{ content.title|t }}</h1>
+        <header class="header">
+            <h2>{{ content.title|t }}</h2>
             <p>{{ content.catchphrase|t }}</p>
         </header>
     {% else %}
     <div class="header">
         {% if content.title|t %}
-            <h1>{{ content.title|t }}</h1>
+            <h2>{{ content.title|t }}</h2>
         {% endif %}
         {% if content.catchphrase|t %}
             <p>{{ content.catchphrase|t }}</p>
