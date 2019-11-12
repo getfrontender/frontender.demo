@@ -2105,6 +2105,9 @@
 				align-items: center;
 			}
 
+            .col {
+                max-width: 100%;
+            }
 		.flex.flex-2 .col {
 			width: 48%;
 		}
@@ -3939,9 +3942,9 @@
 		overflow: hidden;
     }
 
-		.post .box {
+		/* .post .box {
 			margin: 0;
-        }
+        } */
         
 
 	@-moz-keyframes inner {
