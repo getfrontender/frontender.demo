@@ -29,10 +29,10 @@
     <nav id="menu">
         <ul class="links">
             <li><a href="{{ route({'page': '' }) }}"  rel="follow">{{ "Home"|i18n }}</a></li>
-            <li><a href="{{ route({'page': '/how-frontender-works' }) }}"  rel="follow">How it works</a></li>
+            <li><a href="{{ route({'page': '/how-frontender-works' }) }}"  rel="follow">Working with Frontender</a></li>
 
             {% for link in content.links %}
-                <li><a href="{{ route({'page': link.page }) }}" rel="nofollow">{{ link.label|t }}</a></li>
+                <li><a href="{{ route({'page': link.page|t }) }}" rel="nofollow">{{ link.label|t|default(link.page|t) }}</a></li>
             {% endfor %}
 
             <li><a href="{{ route({'page': '/how-frontender-works/scopes' }) }}" rel="nofollow">Scopes</a></li>
