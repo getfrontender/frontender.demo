@@ -1,7 +1,7 @@
 {
     "value": "",
     "label": {
-        "en-GB": "Show"
+        "en-GB": "Show overlay"
     },
     "control": "core/list",
     "options": [
