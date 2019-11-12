@@ -1,0 +1,32 @@
+{#
+    /**
+     * @file
+     * Defaults
+     * @package     Frontender Platform
+     * @subpackage  Road-trip Project
+     * @author      Babs Gösgens
+     * @license     MIT License
+     * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
+     * @link        http://getfrontender.com
+     */
+#}
+
+{% import "macros/template.html.twig" as helper %}
+
+{#
+    Description:
+
+    A simple box adding padding. Black translucent background by default, optionally configurable to be transparent.
+
+    Placement: fullwidth
+    Allow placement: box
+
+#}
+
+<{{ config.container_tag|default("div") }}
+    {{ helper.class_attribute(config, ["box", config.box ]|join(" ")|trim)|raw }}
+    {{ helper.id_attribute(config)|raw }} {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
+    {% for container in containers %}
+        {% include container.template with container %}
+    {% endfor %}
+</{{ config.container_tag|default("div") }}>
