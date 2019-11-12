@@ -31,6 +31,16 @@ class Members extends CoreRoute
                 'upsert' => true
             ]);
 
+            if($data['role']) {
+				Adapter::getInstance()->collection('roles')->findOneAndUpdate([
+					'name' => $data['role']
+				], [
+					'$addToSet' => ['users' => (int) $data['user_id']]
+				], [
+					'upsert' => true
+				]);
+            }
+
             return $res->withStatus(200);
         });
     }
