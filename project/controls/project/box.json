@@ -1,0 +1,21 @@
+{
+    "value": "",
+    "label": {
+        "en-GB": "Box background"
+    },
+    "control": "core/list",
+    "options": [
+        {
+            "value": "",
+            "label": {
+                "en-GB": "Dark background"
+            }
+        },
+        {
+            "value": "box--transparent",
+            "label": {
+                "en-GB": "No background"
+            }
+        }
+    ]
+}
