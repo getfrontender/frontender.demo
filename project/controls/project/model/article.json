@@ -1,0 +1,42 @@
+{
+    "value": {
+        "adapter": "",
+        "model": "",
+        "id": ""
+    },
+    "label": {
+        "en-GB": "Article"
+    },
+    "control": "core/abstract",
+    "type": "lookup",
+    "adapters": [
+        {
+            "value": "Pirates",
+            "label": {
+                "en-GB": "Pirates (Wordpress)"
+            },
+            "models": [
+                {
+                    "value": "Posts",
+                    "label": {
+                        "en-GB": "Posts"
+                    }
+                }
+            ]
+        },
+        {
+            "value": "Cupcakes",
+            "label": {
+                "en-GB": "Cupcakes (Wordpress)"
+            },
+            "models": [
+                {
+                    "value": "Posts",
+                    "label": {
+                        "en-GB": "Posts"
+                    }
+                }
+            ]
+        }
+    ]
+}
