@@ -33,6 +33,20 @@
                     }
                 }
             ]
+        },
+        {
+            "value": "Cupcakes",
+            "label": {
+                "en-GB": "Cupcakes (Wordpress)"
+            },
+            "models": [
+                {
+                    "value": "Media",
+                    "label": {
+                        "en-GB": "Media"
+                    }
+                }
+            ]
         }
     ]
 }
