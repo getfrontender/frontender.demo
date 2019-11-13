@@ -12,7 +12,7 @@
 #}
 
 {% import "macros/template.html.twig" as helper %}
-{% import "macros/unsplash.html.twig" as unsplash %}
+{% import "macros/image.html.twig" as imageHelper %}
 
 {#
     Description:
@@ -30,7 +30,7 @@
     <div class="6u 12u$(medium)">
         {% if model.urls %}
         <span class="image fit" style="position:relative;">
-            <img src="{{ unsplash.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
+            <img src="{{ imageHelper.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
             {% include "demo/partials/unsplash-credit.html.twig" %}
         </span>
         {% endif %}
@@ -50,7 +50,7 @@
     <div class="6u 12u$(medium)">
         {% if model.urls %}
         <span class="image fit" style="position:relative;">
-            <img src="{{ unsplash.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
+            <img src="{{ imageHelper.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
             {% include "demo/partials/unsplash-credit.html.twig" %}
         </span>
         {% endif %}
