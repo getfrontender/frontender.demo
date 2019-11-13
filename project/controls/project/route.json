@@ -1,0 +1,20 @@
+{
+    "value": [],
+    "control": "core/route",
+    "at_most": 10,
+    "repeatable": true,
+    "controls": {
+        "label": {
+            "label": {
+                "en-GB": "Label"
+            },
+            "control": "core/text"
+        },
+        "page": {
+            "label": {
+                "en-GB": "Page"
+            },
+            "control": "core/page"
+        }
+    }
+}
