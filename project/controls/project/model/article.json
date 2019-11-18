@@ -37,6 +37,20 @@
                     }
                 }
             ]
+        },
+        {
+            "value": "Frontender",
+            "label": {
+                "en-GB": "Frontender (Wordpress)"
+            },
+            "models": [
+                {
+                    "value": "Posts",
+                    "label": {
+                        "en-GB": "Posts"
+                    }
+                }
+            ]
         }
     ]
 }
