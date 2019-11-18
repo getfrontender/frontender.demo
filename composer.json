@@ -13,7 +13,7 @@
     ],
     "require": {
         "frontender/wordpress-adapter": "dev-master",
-        "frontender/platform-core": "dev-release/2.0.0",
+        "frontender/platform-core": "dev-master",
         "unsplash/unsplash": "^2.4",
         "ext-json": "*"
     },
