@@ -28,6 +28,9 @@
         ],
         "import-controls": [
             "Frontender\\Core\\Installer\\Importer\\Controls::importViaComposer"
+        ],
+        "reset-mongo": [
+            "Frontender\\Platform\\Utils\\ResetLogic::resetMongo"
         ]
     }
 }
