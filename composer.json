@@ -15,7 +15,8 @@
         "frontender/wordpress-adapter": "dev-master",
         "frontender/platform-core": "dev-master",
         "unsplash/unsplash": "^2.4",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-openssl": "*"
     },
     "autoload": {
         "psr-4": {
