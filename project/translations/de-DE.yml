@@ -2,11 +2,24 @@
 #
 #  * @package     Frontender Platform
 #  * @subpackage  Road-trip Project
-#  * @author      Jeroen Leijten
+#  * @author      Babs Gösgens
 #  * @license     MIT License
 #  * @copyright   Copyright (C) 2014 - 2019 Dipity B.V. All rights reserved.
 #  * @link        http://getfrontender.com
 #
 ##
 
-site title: Road trip
+Frontender: Frontender
+Picture of the Frontender logo: Bild des Frontender Logo
+This website is made with Frontender: Diese Website wurde mit Frontender erstellt
+Demo Website: Demo Website
+Home: Home
+An illustrative screenshot image of Frontender: Ein illustratives Screenshot-Bild von Frontender
+
+Name: Name
+Email: Email
+Category: Kategorie
+Message: Nachricht
+Enter your message: Gib deine Nachricht ein
+Send message: Nachricht senden
+Reset: Formular löschen
