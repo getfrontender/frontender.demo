@@ -42,7 +42,7 @@
         {% endif %}
         {% if link.page|t %}
             <footer>
-                <a href="{{ link.page|t }}" class="button alt">{{ link.label|default({"en-GB": "Read more"})|t }}</a>
+                <a href="{{ link.page|t }}" class="button alt" rel="{{ root_config.follow_links ? "follow" : "nofollow" }}>{{ link.label|default({"en-GB": "Read more"})|t }}</a>
             </footer>
         {% endif %}
     </div>
