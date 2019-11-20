@@ -2,7 +2,7 @@
 
 namespace Frontender\Platform\Model\Unsplash\Image;
 
-use Frontender\Platform\Model\Pirates\PostsModel;
+use Frontender\Platform\Model\Cowboys\PostsModel;
 use Slim\Container;
 use Frontender\Platform\Model\Unsplash\ImageModel;
 use Frontender\Platform\Model\Unsplash\AbstractModel;

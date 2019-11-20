@@ -11,15 +11,15 @@
     "type": "lookup",
     "adapters": [
         {
-            "value": "Pirates",
+            "value": "Cowboys",
             "label": {
-                "en-GB": "Pirates (Wordpress)"
+                "en-GB": "Cowboys (Wordpress)"
             },
             "models": [
                 {
                     "value": "Posts",
                     "label": {
-                        "en-GB": "Posts"
+                        "en-GB": "Post"
                     }
                 }
             ]
@@ -33,7 +33,7 @@
                 {
                     "value": "Posts",
                     "label": {
-                        "en-GB": "Posts"
+                        "en-GB": "Post"
                     }
                 }
             ]
@@ -47,7 +47,7 @@
                 {
                     "value": "Posts",
                     "label": {
-                        "en-GB": "Posts"
+                        "en-GB": "Post"
                     }
                 }
             ]
