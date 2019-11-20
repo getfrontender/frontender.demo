@@ -22,7 +22,7 @@
         {% for link in content.links %}
             {% if link.page.domain|t %}
             <li>
-                <a href="{{ link.page.protocol|t|default("//") }}{{ link.page.domain|t }}" title="{{ link.label|t }}" target="_blank" class="{{ config.style }} {{ "fa-" ~ link.icon|t }}">
+                <a href="{{ link.page.protocol|t|default("//") }}{{ link.page.domain|t }}" title="{{ link.label|t }}" rel="{{ root_config.follow_links ? "follow" : "nofollow" }} target="_blank" class="{{ config.style }} {{ "fa-" ~ link.icon|t }}">
                     {% if link.label|t %}
                         <span class="label">{{ link.label|t|default(link.icon|i18n) }}</span>
                     {% endif %}
