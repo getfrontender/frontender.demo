@@ -9,7 +9,7 @@ class Encryption extends \Twig_Extension {
 	private $key;
 
 	public function __construct(Container $container) {
-		$this->key = $container->config->encryption_key;
+		$this->key = $container->config->encryption_key ?? '';
 		$this->cipher = 'AES-128-CBC';
 	}
 
