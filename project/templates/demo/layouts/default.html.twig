@@ -25,6 +25,8 @@
     {% if page_config.seo.controls.meta_keywords.value|t is not empty %}
         <meta name="keywords" content="{{ page_config.seo.controls.meta_keywords.value|t }}">
     {% endif %}
+
+    <link rel="canonical" href="{{ route({'page': page }) }}">
 {% endblock %}
 
 {% block stylesheets %}

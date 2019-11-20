@@ -29,6 +29,11 @@ return [
         'path' => ROOT_PATH . '/project'
     ],
 
+    /* Locale settings */
+    'locales' => [
+        'filter' => ['en-GB']
+    ],
+
     /* Template (Twig) settings */
     'template' => [
         'path' => ROOT_PATH . '/project/templates',
