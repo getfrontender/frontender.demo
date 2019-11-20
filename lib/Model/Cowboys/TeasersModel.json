@@ -1,0 +1,21 @@
+{
+    "label": {
+        "en-GB": "Teasers"
+    },
+    "map": {
+        "id": "id",
+        "title": "title.rendered",
+        "description": "content.rendered",
+        "dateModified": "modified",
+        "datePublished": "date"
+    },
+    "filters": {
+        "search": {
+            "label": {
+                "en-GB": "Search term"
+            },
+            "type": "search"
+        }
+    },
+    "has_preview": true
+}
