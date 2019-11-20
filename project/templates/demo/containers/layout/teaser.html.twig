@@ -13,32 +13,36 @@
 
 {% import "macros/template.html.twig" as helper %}
 
+{% set title = content.title|t|default(model.title.rendered|default(''))|raw %}
+{% set body = content.body|t|markdown|default(model.content.rendered|default(''))|raw %}
+{% set standfirst = content.standfirst|t|markdown|default(model.excerpt.rendered|default(''))|raw %}
+
 <{{ config.container_tag|default("div") }}
  {{ helper.class_attribute(config, []|join(" ")|trim)|raw }}
  {{ helper.frontender_id_attribute(frontender, "frontender")|raw }}>
     {% if content.title|t and content.catchphrase|t %}
         <header class="header">
-            <h2>{{ content.title|t }}</h2>
+            <h2>{{ title|t }}</h2>
             <p>{{ content.catchphrase|t }}</p>
         </header>
     {% else %}
     <div class="header">
-        {% if content.title|t %}
-            <h2>{{ content.title|t }}</h2>
+        {% if title|t %}
+            <h2>{{ title|t }}</h2>
         {% endif %}
-        {% if content.catchphrase|t %}
-            <p>{{ content.catchphrase|t }}</p>
+        {% if standfirst|t %}
+            {{ standfirst|t|raw }}
         {% endif %}
     </div>
     {% endif %}
-    {% if content.body|t %}
+    {% if body|t %}
         <div class="content">
-            {{ content.body|t|markdown|raw }}
+            {{ body|t|raw }}
         </div>
     {% endif %}
     {% if link.page|t %}
         <footer>
-            <a href="{{ link.page|t }}" class="button alt">{{ link.label|default({"en-GB": "Read more"})|t }}</a>
+            <a href="{{ link.page|t }}" class="button alt" rel="{{ root_config.follow_links ? "follow" : "nofollow" }}">{{ link.label|default({"en-GB": "Read more"})|t }}</a>
         </footer>
     {% endif %}
 </{{ config.container_tag|default("div") }}>

@@ -13,9 +13,12 @@
 {% macro crop(model, config = {}, class = "") %}
 
     {% import _self as imageHelper %}
+    
 
     {% if model.urls %}
         {{ imageHelper.cropUnsplash(model, config, class) }}
+    {% elseif model.featuredImage %}
+        {{ imageHelper.cropWordpress(model.featuredImage.sizes.full, config, class) }}
     {% elseif model.source_url %}
         {{ imageHelper.cropWordpress(model, config, class) }}
     {% endif %}
