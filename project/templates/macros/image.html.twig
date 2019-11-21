@@ -20,8 +20,6 @@
     {% elseif model.featuredImage.source_url %}
         {{ imageHelper.cropWordpress(model.featuredImage, config, class) }}
     {% elseif model.source_url %}
-        {{ model.source_url }}
-
         {{ imageHelper.cropWordpress(model, config, class) }}
     {% endif %}
 
