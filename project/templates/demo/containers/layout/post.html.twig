@@ -24,16 +24,13 @@
     Placement: box
     Allow placement: none
 #}
-
 <{{ config.container_tag|default('div') }} {{ helper.class_attribute(config, ['row']|join('  |  ')|trim)|raw }}{{ helper.frontender_id_attribute(frontender, 'frontender')|raw }}>
     {% if config.image_alignment|default("right") == "left" %}
     <div class="6u 12u$(medium)">
-        {% if model.urls %}
         <span class="image fit" style="position:relative;">
-            <img src="{{ imageHelper.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
+            <img src="{{ imageHelper.crop(model, {w: 768, h: 512})|trim }}" alt="">
             {% include "demo/partials/unsplash-credit.html.twig" %}
         </span>
-        {% endif %}
     </div>
     {% endif %}
     <div class="6u 12u$(medium)">
@@ -42,18 +39,16 @@
         {% endif %}
         {% if link.page|t %}
             <footer>
-                <a href="{{ link.page|t }}" class="button alt" rel="{{ root_config.follow_links ? "follow" : "nofollow" }}>{{ link.label|default({"en-GB": "Read more"})|t }}</a>
+                <a href="{{ link.page|t }}" class="button alt" rel="{{ root_config.follow_links ? "follow" : "nofollow" }}">{{ link.label|default({"en-GB": "Read more"})|t }}</a>
             </footer>
         {% endif %}
     </div>
     {% if config.image_alignment|default("right") == "right" %}
     <div class="6u 12u$(medium)">
-        {% if model.urls %}
         <span class="image fit" style="position:relative;">
-            <img src="{{ imageHelper.crop(model, {w: 640, h: 480}) }}" alt="{{ model.description }}">
+            <img src="{{ imageHelper.crop(model, {w: 768, h: 512})|trim }}" alt="">
             {% include "demo/partials/unsplash-credit.html.twig" %}
         </span>
-        {% endif %}
     </div>
     {% endif %}
 </{{ config.container_tag|default('div') }}>
