@@ -39,6 +39,19 @@
 
 {% macro cropWordpress(model, config = {}, class = "") %}
 
-    {{ model.source_url }}
+    {#  Merge the default settings with any override #}
+    {% set config = {w: 768, h: 512}|merge(config) %}
+
+    {# Attempt to locate the requested size, if not will always return the last (original size) #}
+    {% set source_url = model.source_url %}
+    {% if model.media_details.sizes is defined %}
+        {% for image in model.media_details.sizes %}
+            {% if image.width == config.w %}
+                {% set source_url = image.source_url %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {{ source_url }}
 
 {% endmacro %}
