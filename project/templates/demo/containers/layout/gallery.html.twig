@@ -40,7 +40,7 @@
         {% for item in model %}
         <div class="{{ columns_map|slice(config.columns|default(3) - 1)|first }}">
             <span class="image fit" style="position:relative;">
-                <img src="{{ imageHelper.crop(item, {w: 640, h: 480})|trim }}" alt="{{ item.alt_description }}">
+                <img src="{{ imageHelper.crop(item, {w: 640, h: 480})|trim|raw }}" alt="{{ item.alt_description }}">
                 {% include "demo/partials/unsplash-credit.html.twig" with {model: item} %}
             </span>
         </div>
